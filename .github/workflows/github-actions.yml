@@ -1,0 +1,50 @@
+name: GitHub Actions
+
+on:
+    push:
+        branches:
+            - main
+
+permissions:
+    checks: write
+    contents: write
+    pages: write
+    id-token: write
+    deployments: write
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+
+        strategy:
+            matrix:
+                node-version: [18.x]
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+            - name: Install dependencies
+              run: yarn
+
+            - name: Build
+              run: yarn build
+
+            - name: Setup Pages
+              uses: actions/configure-pages@v2
+
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v1
+              with:
+                  path: 'dist'
+
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v1
