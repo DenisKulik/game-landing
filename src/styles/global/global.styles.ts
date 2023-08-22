@@ -9,7 +9,7 @@ export const theme: ThemeType = {
         black: '#000',
         grey: '#8C96A0',
         darkgrey: '#30373F',
-        background: '#1C2023',
+        background: '#1B1F22',
     },
     media: {
         large: '(max-width: 1200px)',
