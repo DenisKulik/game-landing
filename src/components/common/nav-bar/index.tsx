@@ -1,41 +1,50 @@
-import { RiArrowDownSLine } from 'react-icons/ri'
+import {
+    ArrowDown,
+    CurrentLanguage,
+    LanguageItem,
+    LanguagesList,
+    LanguagesWrapper,
+    LinkList,
+    StyledLink,
+    StyledNav,
+} from 'components/common/nav-bar/nav-bar.styles.ts'
+import { FlexContainer } from 'components/common/flex-container'
 
-import { LanguageBlock, StyledNav } from 'components/common/nav-bar/nav-bar.styles.ts'
-import { Icon } from 'components/common/icon'
+type Props = {
+    isOpened: boolean
+}
 
-export const NavBar = () => {
+export const NavBar = ({ isOpened }: Props) => {
     return (
-        <StyledNav>
-            <ul>
+        <StyledNav as={FlexContainer} isOpened={isOpened} gap="3rem">
+            <LinkList as={FlexContainer} gap="3rem">
                 <li>
-                    <a href="#">editions</a>
+                    <StyledLink href="#">editions</StyledLink>
                 </li>
                 <li>
-                    <a href="#">controller</a>
+                    <StyledLink href="#">controller</StyledLink>
                 </li>
                 <li>
-                    <a href="#">about game</a>
+                    <StyledLink href="#">about game</StyledLink>
                 </li>
                 <li>
-                    <a href="#">explore</a>
+                    <StyledLink href="#">explore</StyledLink>
                 </li>
                 <li>
-                    <a href="#">news</a>
+                    <StyledLink href="#">news</StyledLink>
                 </li>
                 <li>
-                    <a href="#">faq</a>
+                    <StyledLink href="#">faq</StyledLink>
                 </li>
-            </ul>
-
-            <LanguageBlock>
-                <span>english</span>
-                <Icon icon={RiArrowDownSLine} />
-
-                <div>
-                    <div>Русский</div>
-                    <div>English</div>
-                </div>
-            </LanguageBlock>
+            </LinkList>
+            <LanguagesWrapper as={FlexContainer} align="center">
+                <CurrentLanguage>english</CurrentLanguage>
+                <ArrowDown size="2rem" />
+                <LanguagesList>
+                    <LanguageItem>Русский</LanguageItem>
+                    <LanguageItem>English</LanguageItem>
+                </LanguagesList>
+            </LanguagesWrapper>
         </StyledNav>
     )
 }

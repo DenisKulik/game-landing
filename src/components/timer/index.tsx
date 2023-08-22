@@ -1,24 +1,25 @@
-import { StyledTimer, TimerInner, TimerItem } from 'components/timer/timer.styles.ts'
+import { StyledTimer, TimerItem } from 'components/timer/timer.styles.ts'
+import { FlexContainer } from 'components/common/flex-container'
 
 export const Timer = () => {
     return (
-        <StyledTimer>
+        <StyledTimer as={FlexContainer} align="center" gap="1.9rem">
             <span>Release</span>
 
-            <TimerInner>
+            <FlexContainer justify="space-between" gap="0.5rem">
                 <TimerItem>
                     <div>0</div>
-                    <div>D</div>
+                    <span>D</span>
                 </TimerItem>
                 <TimerItem>
                     <div>0</div>
-                    <div>H</div>
+                    <span>H</span>
                 </TimerItem>
                 <TimerItem>
                     <div>0</div>
-                    <div>M</div>
+                    <span>M</span>
                 </TimerItem>
-            </TimerInner>
+            </FlexContainer>
         </StyledTimer>
     )
 }

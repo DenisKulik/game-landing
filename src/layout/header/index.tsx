@@ -1,19 +1,28 @@
+import { useState } from 'react'
+
 import { Container } from 'components/common/container'
-import { HeaderContainer, HeaderMenu, StyledHeader } from 'layout/header/header.styles.ts'
+import { StyledHeader } from 'layout/header/header.styles.ts'
 import { NavBar } from 'components/common/nav-bar'
-import { BurgerBtn } from 'components/burger-btn'
+import { BurgerBtn } from 'components/common/burger-btn'
 import { Timer } from 'components/timer'
+import { FlexContainer } from 'components/common/flex-container'
 
 export const Header = () => {
+    const [isOpenedNav, setIsOpenedNav] = useState(false)
+
+    const onClickBurgerMenu = () => {
+        setIsOpenedNav(!isOpenedNav)
+    }
+
     return (
         <StyledHeader>
-            <HeaderContainer as={Container}>
-                <HeaderMenu>
-                    <BurgerBtn />
-                    <NavBar />
-                </HeaderMenu>
+            <FlexContainer as={Container} justify="space-between">
+                <FlexContainer align="flex-start" gap="5rem">
+                    <BurgerBtn callback={onClickBurgerMenu} active={isOpenedNav} />
+                    <NavBar isOpened={isOpenedNav} />
+                </FlexContainer>
                 <Timer />
-            </HeaderContainer>
+            </FlexContainer>
         </StyledHeader>
     )
 }

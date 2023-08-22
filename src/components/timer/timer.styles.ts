@@ -1,12 +1,24 @@
 import styled from 'styled-components'
 
 export const StyledTimer = styled.div`
-    display: flex;
-    align-items: center;
+    & > span {
+        font-size: 1.6rem;
+        color: ${props => props.theme.colors.grey};
+    }
 `
 
-export const TimerInner = styled.div`
-    display: flex;
-`
+export const TimerItem = styled.div`
+    min-width: 5.5rem;
+    text-align: center;
 
-export const TimerItem = styled.div``
+    & > div {
+        font-size: 4rem;
+        font-weight: 700;
+        color: ${props => props.theme.colors.sea};
+    }
+
+    & > span {
+        font-size: 1.6rem;
+        color: ${props => props.theme.colors.grey};
+    }
+`
