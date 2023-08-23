@@ -1,13 +1,10 @@
-import { useContext } from 'react'
-
-import { AppContext } from 'app/model'
+import { editions } from 'data'
 import { Container } from 'components/common/container'
 import { EditionsHeading, StyledEditions } from 'layout/sections/editions/editions.styles.ts'
 import { FlexContainer } from 'components/common/flex-container'
 import { EditionCard } from 'components/edition-card'
 
 export const Editions = () => {
-    const { editions } = useContext(AppContext)
     const EditionCards = editions.map(card => <EditionCard card={card} />)
 
     return (

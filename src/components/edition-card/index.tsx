@@ -7,7 +7,7 @@ import {
     Subtitle,
     Title,
 } from 'components/edition-card/edition-card.styles.ts'
-import { Edition } from 'app/model'
+import { Edition } from 'data'
 import { Button } from 'components/common/button'
 
 type Props = {
