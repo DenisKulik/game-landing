@@ -14,30 +14,21 @@ type Props = {
     isOpened: boolean
 }
 
+const navItems: string[] = ['editions', 'controller', 'about', 'explore', 'news', 'faq']
+
 export const NavBar = ({ isOpened }: Props) => {
+    const navElements = navItems.map(elem => (
+        <li key={elem}>
+            <StyledLink href="#">{elem}</StyledLink>
+        </li>
+    ))
+
     return (
-        <StyledNav as={FlexContainer} isOpened={isOpened} gap="3rem">
-            <LinkList as={FlexContainer} gap="3rem">
-                <li>
-                    <StyledLink href="#">editions</StyledLink>
-                </li>
-                <li>
-                    <StyledLink href="#">controller</StyledLink>
-                </li>
-                <li>
-                    <StyledLink href="#">about game</StyledLink>
-                </li>
-                <li>
-                    <StyledLink href="#">explore</StyledLink>
-                </li>
-                <li>
-                    <StyledLink href="#">news</StyledLink>
-                </li>
-                <li>
-                    <StyledLink href="#">faq</StyledLink>
-                </li>
-            </LinkList>
-            <LanguagesWrapper as={FlexContainer} align="center">
+        <FlexContainer as={StyledNav} isOpened={isOpened} gap="3rem">
+            <FlexContainer as={LinkList} gap="3rem">
+                {navElements}
+            </FlexContainer>
+            <LanguagesWrapper align="center">
                 <CurrentLanguage>english</CurrentLanguage>
                 <ArrowDown size="2rem" />
                 <LanguagesList>
@@ -45,6 +36,6 @@ export const NavBar = ({ isOpened }: Props) => {
                     <LanguageItem>English</LanguageItem>
                 </LanguagesList>
             </LanguagesWrapper>
-        </StyledNav>
+        </FlexContainer>
     )
 }

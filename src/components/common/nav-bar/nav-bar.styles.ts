@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { RiArrowDownSLine } from 'react-icons/ri'
+import { FlexContainer } from 'components/common/flex-container'
 
 type Props = {
     isOpened: boolean
@@ -42,7 +43,7 @@ export const LanguagesList = styled.div`
     background-color: ${props => props.theme.colors.darkgrey};
 `
 
-export const LanguagesWrapper = styled.div`
+export const LanguagesWrapper = styled(FlexContainer)`
     position: relative;
     cursor: pointer;
 

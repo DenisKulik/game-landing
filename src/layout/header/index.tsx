@@ -16,13 +16,13 @@ export const Header = () => {
 
     return (
         <StyledHeader>
-            <FlexContainer as={Container} justify="space-between">
+            <Container as={FlexContainer} justify="space-between">
                 <FlexContainer align="flex-start" gap="5rem">
                     <BurgerBtn callback={onClickBurgerMenu} active={isOpenedNav} />
                     <NavBar isOpened={isOpenedNav} />
                 </FlexContainer>
                 <Timer />
-            </FlexContainer>
+            </Container>
         </StyledHeader>
     )
 }
