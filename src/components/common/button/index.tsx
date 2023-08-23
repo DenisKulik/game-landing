@@ -1,23 +1,31 @@
 import React from 'react'
 import { StyledButton } from 'components/common/button/button.styles.ts'
 
-type Props = DefaultButtonType & {
+type Props = DefaultButton & {
     title: string
-    variant?: string
-    color?: string
+    size?: Size
+    color?: Color
     callback?: () => void
 }
 
-export const Button = ({ title, variant = 'medium', color, callback, ...restProps }: Props) => {
+export const Button = ({
+    title,
+    size = 'medium',
+    color = 'primary',
+    callback,
+    ...restProps
+}: Props) => {
     return (
-        <StyledButton variant={variant} color={color} onClick={callback} {...restProps}>
+        <StyledButton size={size} color={color} onClick={callback} {...restProps}>
             {title}
         </StyledButton>
     )
 }
 
 // types
-type DefaultButtonType = React.DetailedHTMLProps<
+type DefaultButton = React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
 >
+export type Size = 'medium' | 'small'
+export type Color = 'primary' | 'secondary'
