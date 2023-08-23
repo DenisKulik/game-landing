@@ -59,7 +59,7 @@ export type SystemRequirements = {
     'dedicated video ram': string
 }
 
-export type Edition = {
+export type ConsoleEdition = {
     platform: string
     premiere: string
     publisher: string
@@ -76,6 +76,6 @@ type PcOptions = {
 }
 
 type Ps4Options = {
-    standard: Edition
-    limited: Edition
+    standard: ConsoleEdition
+    limited: ConsoleEdition
 }
