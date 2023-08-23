@@ -27,5 +27,5 @@ type DefaultButton = React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
 >
-export type Size = 'medium' | 'small'
+export type Size = 'big' | 'medium' | 'small'
 export type Color = 'primary' | 'secondary'
