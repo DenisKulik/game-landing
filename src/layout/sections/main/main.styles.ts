@@ -5,7 +5,7 @@ import { moveInRight } from 'styles'
 
 export const StyledMain = styled.section`
     padding-top: 18rem;
-    min-height: 70vh;
+    min-height: 76.5rem;
     position: relative;
 
     &:before,
