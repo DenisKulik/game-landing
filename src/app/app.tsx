@@ -5,6 +5,7 @@ import { Editions } from 'layout/sections/editions'
 import { DualSense } from 'layout/sections/dual-sense'
 import { About } from 'layout/sections/about'
 import { Explore } from 'layout/sections/explore'
+import { News } from 'layout/sections/news'
 
 export const App = () => {
     return (
@@ -15,6 +16,7 @@ export const App = () => {
             <DualSense />
             <About />
             <Explore />
+            <News />
         </AppWrapper>
     )
 }
