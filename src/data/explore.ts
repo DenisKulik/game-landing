@@ -1,9 +1,4 @@
-type Predecessor = {
-    pc: PcOptions
-    ps4: Ps4Options
-}
-
-export const predecessor: Predecessor = {
+export const explore: Explore = {
     pc: {
         minimum: {
             cpu: 'Intel i5-2500k (4 core 3.3 GHz) or AMD Ryzen 3 1200 (4 core 3.1 GHz)',
@@ -48,6 +43,7 @@ export const predecessor: Predecessor = {
     },
 }
 
+// types
 export type SystemRequirements = {
     cpu: string
     ram: string
@@ -78,4 +74,9 @@ type PcOptions = {
 type Ps4Options = {
     standard: ConsoleEdition
     limited: ConsoleEdition
+}
+
+type Explore = {
+    pc: PcOptions
+    ps4: Ps4Options
 }

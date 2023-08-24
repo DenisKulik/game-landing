@@ -1,2 +1,2 @@
 export * from './editions.ts'
-export * from './predecessor.ts'
+export * from 'data/explore.ts'
