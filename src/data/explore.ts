@@ -1,5 +1,9 @@
+import pcImg from 'assets/img/pc.webp'
+import psImg from 'assets/img/ps.webp'
+
 export const explore: Explore = {
     pc: {
+        img: pcImg,
         minimum: {
             cpu: 'Intel i5-2500k (4 core 3.3 GHz) or AMD Ryzen 3 1200 (4 core 3.1 GHz)',
             ram: '8 GB',
@@ -22,6 +26,7 @@ export const explore: Explore = {
         },
     },
     ps4: {
+        img: psImg,
         standard: {
             platform: 'PS4',
             premiere: '20.4.2018',
@@ -67,11 +72,13 @@ export type ConsoleEdition = {
 }
 
 type PcOptions = {
+    img: string
     minimum: SystemRequirements
     recommended: SystemRequirements
 }
 
 type Ps4Options = {
+    img: string
     standard: ConsoleEdition
     limited: ConsoleEdition
 }
