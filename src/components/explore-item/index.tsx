@@ -53,7 +53,7 @@ export const ExploreItem = ({
     return (
         <StyledExploreItem>
             <ExploreTitle>{title}</ExploreTitle>
-            <Switch>
+            <Switch justify="center" align="center" gap="1.5rem">
                 <CurrentEdition edition="EditionOne" current={edition}>
                     {characteristics[0]}
                 </CurrentEdition>
@@ -71,7 +71,7 @@ export const ExploreItem = ({
             </Switch>
 
             <FlexContainer justify="center" gap="10rem" wrap="wrap">
-                <ImageWrapper>
+                <ImageWrapper align="flex-end">
                     <ImageInner style={{ backgroundImage: `url(${bgCard})` }}>
                         <Image src={img} />
                     </ImageInner>

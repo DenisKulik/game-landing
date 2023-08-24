@@ -18,9 +18,6 @@ export const ExploreTitle = styled.h3`
 
 export const Switch = styled(FlexContainer)`
     position: relative;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
     margin-bottom: 3rem;
     z-index: 2;
 `
@@ -73,7 +70,6 @@ export const Input = styled.input`
 `
 
 export const ImageWrapper = styled(FlexContainer)`
-    align-items: flex-end;
     text-align: center;
 `
 
