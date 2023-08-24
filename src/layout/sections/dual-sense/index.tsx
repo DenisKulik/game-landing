@@ -11,7 +11,7 @@ import {
 } from 'layout/sections/dual-sense/dual-sense.styles.ts'
 import { Container } from 'components/common/container'
 import { FlexContainer } from 'components/common/flex-container'
-import dual from 'assets/img/dual.png'
+import dual from 'assets/img/dual.webp'
 import { Button } from 'components/common/button'
 
 export const DualSense = () => {

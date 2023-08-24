@@ -1,5 +1,5 @@
-import cardStandard from 'assets/img/card-standard.png'
-import cardDeluxe from 'assets/img/card-deluxe.png'
+import cardStandard from 'assets/img/card-standard.webp'
+import cardDeluxe from 'assets/img/card-deluxe.webp'
 
 export type Edition = {
     edition: string
