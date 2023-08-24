@@ -13,6 +13,6 @@ export const FlexContainer = styled.div<Props>`
     flex-direction: ${({ direction }) => direction || 'row'};
     justify-content: ${({ justify }) => justify || 'flex-start'};
     align-items: ${({ align }) => align || 'stretch'};
-    flex-wrap: ${({ wrap }) => wrap || 'wrap'};
+    flex-wrap: ${({ wrap }) => wrap || 'nowrap'};
     gap: ${({ gap }) => gap || '0px'};
 `

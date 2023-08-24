@@ -8,7 +8,7 @@ import { Timer } from 'components/timer'
 import { FlexContainer } from 'components/common/flex-container'
 
 export const Header = () => {
-    const [isOpenedNav, setIsOpenedNav] = useState(false)
+    const [isOpenedNav, setIsOpenedNav] = useState<boolean>(false)
 
     const onClickBurgerMenu = () => {
         setIsOpenedNav(!isOpenedNav)
@@ -16,8 +16,8 @@ export const Header = () => {
 
     return (
         <StyledHeader>
-            <Container as={FlexContainer} justify="space-between">
-                <FlexContainer align="flex-start" gap="5rem">
+            <Container as={FlexContainer} justify="space-between" wrap="wrap">
+                <FlexContainer align="flex-start" gap="5rem" wrap="wrap">
                     <BurgerBtn callback={onClickBurgerMenu} active={isOpenedNav} />
                     <NavBar isOpened={isOpenedNav} />
                 </FlexContainer>

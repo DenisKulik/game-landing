@@ -24,7 +24,7 @@ export const NavBar = ({ isOpened }: Props) => {
     ))
 
     return (
-        <FlexContainer as={StyledNav} isOpened={isOpened} gap="3rem">
+        <FlexContainer as={StyledNav} opened={isOpened} gap="3rem" wrap="wrap">
             <FlexContainer as={LinkList} gap="3rem">
                 {navElements}
             </FlexContainer>

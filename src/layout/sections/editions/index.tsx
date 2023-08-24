@@ -5,7 +5,7 @@ import { FlexContainer } from 'components/common/flex-container'
 import { EditionCard } from 'components/edition-card'
 
 export const Editions = () => {
-    const EditionCards = editions.map(card => <EditionCard card={card} />)
+    const EditionCards = editions.map((card, idx) => <EditionCard key={idx} card={card} />)
 
     return (
         <StyledEditions>

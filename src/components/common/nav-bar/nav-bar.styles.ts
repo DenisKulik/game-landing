@@ -3,12 +3,12 @@ import { RiArrowDownSLine } from 'react-icons/ri'
 import { FlexContainer } from 'components/common/flex-container'
 
 type Props = {
-    isOpened: boolean
+    opened: boolean
 }
 
 export const StyledNav = styled.nav<Props>`
-    visibility: ${props => (props.isOpened ? 'visible' : 'hidden')};
-    transform: translateX(${props => (props.isOpened ? '0' : '-1000px')});
+    visibility: ${({ opened }) => (opened ? 'visible' : 'hidden')};
+    transform: translateX(${({ opened }) => (opened ? '0' : '-1000px')});
     transition: all 0.25s ease-in-out;
 `
 
