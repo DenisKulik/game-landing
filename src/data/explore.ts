@@ -3,7 +3,9 @@ import psImg from 'assets/img/ps.webp'
 
 export const explore: Explore = {
     pc: {
+        title: 'Here are the God of War (PC) System Requirements',
         img: pcImg,
+        values: ['minimum', 'recommended'],
         minimum: {
             cpu: 'Intel i5-2500k (4 core 3.3 GHz) or AMD Ryzen 3 1200 (4 core 3.1 GHz)',
             ram: '8 GB',
@@ -25,8 +27,10 @@ export const explore: Explore = {
             'dedicated video ram': '6 GB or higher',
         },
     },
-    ps4: {
+    ps: {
+        title: 'God of War for PS4',
         img: psImg,
+        values: ['standard', 'limited'],
         standard: {
             platform: 'PS4',
             premiere: '20.4.2018',
@@ -71,19 +75,23 @@ export type ConsoleEdition = {
     availability?: 'Limited Quantity'
 }
 
-type PcOptions = {
+export type PcData = {
+    title: string
     img: string
+    values: string[]
     minimum: SystemRequirements
     recommended: SystemRequirements
 }
 
-type Ps4Options = {
+export type PsData = {
+    title: string
     img: string
+    values: string[]
     standard: ConsoleEdition
     limited: ConsoleEdition
 }
 
-type Explore = {
-    pc: PcOptions
-    ps4: Ps4Options
+export type Explore = {
+    pc: PcData
+    ps: PsData
 }
