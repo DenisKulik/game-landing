@@ -15,7 +15,7 @@ type Props = {
 }
 
 export const EditionCard = ({ card }: Props) => {
-    const infoElements = card.info.map(item => <InfoItem>{item}</InfoItem>)
+    const infoElements = card.info.map((item, idx) => <InfoItem key={idx}>{item}</InfoItem>)
 
     return (
         <StyledEditionCard>

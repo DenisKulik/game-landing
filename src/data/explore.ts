@@ -1,12 +1,16 @@
 import pcImg from 'assets/img/pc.webp'
 import psImg from 'assets/img/ps.webp'
+import bgCardPs from 'assets/img/bg-card-ps.webp'
+import bgCardPc from 'assets/img/bg-card-pc.webp'
 
 export const explore: Explore = {
     pc: {
+        platform: 'pc',
         title: 'Here are the God of War (PC) System Requirements',
         img: pcImg,
-        values: ['minimum', 'recommended'],
-        minimum: {
+        bgCard: bgCardPc,
+        characteristics: ['minimum', 'recommended'],
+        editionOne: {
             cpu: 'Intel i5-2500k (4 core 3.3 GHz) or AMD Ryzen 3 1200 (4 core 3.1 GHz)',
             ram: '8 GB',
             os: 'Windows 10 64-bit',
@@ -15,8 +19,9 @@ export const explore: Explore = {
             'vertex shader': 5.1,
             'free disk space': '70 GB',
             'dedicated video ram': '4 GB',
+            price: 15.99,
         },
-        recommended: {
+        editionTwo: {
             cpu: 'Intel Core i7-4770 (4 core 3.4 GHz) or AMD Ryzen 5 1500X (4 core 3.5 GHz)',
             ram: '16 GB',
             os: 'Windows 10 64-bit',
@@ -25,21 +30,25 @@ export const explore: Explore = {
             'vertex shader': 5.1,
             'free disk space': '70 GB',
             'dedicated video ram': '6 GB or higher',
+            price: 15.99,
         },
     },
     ps: {
+        platform: 'ps',
         title: 'God of War for PS4',
         img: psImg,
-        values: ['standard', 'limited'],
-        standard: {
+        bgCard: bgCardPs,
+        characteristics: ['standard', 'limited'],
+        editionOne: {
             platform: 'PS4',
             premiere: '20.4.2018',
             publisher: 'Sony Interactive Entertainment Europe',
             Species: 'Action, Adventure',
             Voice: 'English, Polish, Russian',
             languages: 'English, Dutch, Polish, Russian, Turkish',
+            price: 15.99,
         },
-        limited: {
+        editionTwo: {
             platform: 'PS4',
             premiere: '20.4.2018',
             publisher: 'Sony Interactive Entertainment Europe',
@@ -48,12 +57,15 @@ export const explore: Explore = {
             languages: 'English, Dutch, Polish, Russian, Turkish',
             extras: 'Exclusive Artbook, In-Game Skins Pack',
             availability: 'Limited Quantity',
+            price: 18.99,
         },
     },
 }
 
 // types
-export type SystemRequirements = {
+export type Platform = 'pc' | 'ps'
+
+export type PcEdition = {
     cpu: string
     ram: string
     os: string
@@ -62,9 +74,10 @@ export type SystemRequirements = {
     'vertex shader': number
     'free disk space': string
     'dedicated video ram': string
+    price: number
 }
 
-export type ConsoleEdition = {
+export type PsEdition = {
     platform: string
     premiere: string
     publisher: string
@@ -73,25 +86,20 @@ export type ConsoleEdition = {
     languages: string
     extras?: 'Exclusive Artbook, In-Game Skins Pack'
     availability?: 'Limited Quantity'
+    price: number
 }
 
-export type PcData = {
+export type Data<T> = {
+    platform: Platform
     title: string
     img: string
-    values: string[]
-    minimum: SystemRequirements
-    recommended: SystemRequirements
-}
-
-export type PsData = {
-    title: string
-    img: string
-    values: string[]
-    standard: ConsoleEdition
-    limited: ConsoleEdition
+    bgCard: string
+    characteristics: string[]
+    editionOne: T
+    editionTwo: T
 }
 
 export type Explore = {
-    pc: PcData
-    ps: PsData
+    pc: Data<PcEdition>
+    ps: Data<PsEdition>
 }

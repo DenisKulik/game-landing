@@ -1,9 +1,87 @@
-import { StyledExploreItem } from 'components/explore-item/explore-item.styles.ts'
+import { ChangeEvent } from 'react'
+import { PcEdition, Platform, PsEdition } from 'data'
+import {
+    Input,
+    ExploreTitle,
+    CurrentEdition,
+    StyledExploreItem,
+    Switch,
+    SwichControl,
+    Knob,
+    Image,
+    ImageWrapper,
+    Description,
+    EditionList,
+    EditionItem,
+    ImageInner,
+} from 'components/explore-item/explore-item.styles.ts'
+import { FlexContainer } from 'components/common/flex-container'
+import { Button } from 'components/common/button'
 
-// type Props = {
-//     optionsList: SystemRequirements | Edition
-// }
+type Props = {
+    platform: Platform
+    title: string
+    img: string
+    bgCard: string
+    characteristics: string[]
+    edition: 'EditionOne' | 'EditionTwo'
+    data: PcEdition | PsEdition
+    onChangeCurrentEdition: (platform: Platform, checked: boolean) => void
+}
 
-export const ExploreItem = () => {
-    return <StyledExploreItem></StyledExploreItem>
+export const ExploreItem = ({
+    platform,
+    title,
+    img,
+    bgCard,
+    characteristics,
+    edition,
+    data,
+    onChangeCurrentEdition,
+}: Props) => {
+    const EditionElements = Object.entries(data).map(([key, value], idx) => (
+        <EditionItem key={idx}>
+            <span>{key}</span>
+            <span>: {value}</span>
+        </EditionItem>
+    ))
+
+    const onChangeChecked = (e: ChangeEvent<HTMLInputElement>) => {
+        onChangeCurrentEdition(platform, e.currentTarget.checked)
+    }
+
+    return (
+        <StyledExploreItem>
+            <ExploreTitle>{title}</ExploreTitle>
+            <Switch>
+                <CurrentEdition edition="EditionOne" current={edition}>
+                    {characteristics[0]}
+                </CurrentEdition>
+                <SwichControl>
+                    <Input
+                        type="checkbox"
+                        onChange={onChangeChecked}
+                        checked={edition === 'EditionTwo'}
+                    />
+                    <Knob></Knob>
+                </SwichControl>
+                <CurrentEdition edition="EditionTwo" current={edition}>
+                    {characteristics[1]}
+                </CurrentEdition>
+            </Switch>
+
+            <FlexContainer justify="center" gap="10rem" wrap="wrap">
+                <ImageWrapper>
+                    <ImageInner style={{ backgroundImage: `url(${bgCard})` }}>
+                        <Image src={img} />
+                    </ImageInner>
+                </ImageWrapper>
+
+                <Description order={platform === 'ps' ? -1 : 0}>
+                    <EditionList>{EditionElements}</EditionList>
+                    <Button title="buy now" color="secondary" size="small" />
+                </Description>
+            </FlexContainer>
+        </StyledExploreItem>
+    )
 }
