@@ -19,7 +19,6 @@ export const ExploreTitle = styled.h3`
 export const Switch = styled(FlexContainer)`
     position: relative;
     margin-bottom: 3rem;
-    z-index: 2;
 `
 
 export const CurrentEdition = styled.span<CurrentEditionProps>`
@@ -58,7 +57,7 @@ export const Knob = styled.span`
 export const Input = styled.input`
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     opacity: 0;
     cursor: pointer;
     z-index: 2;
