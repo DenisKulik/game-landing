@@ -1,7 +1,7 @@
 import { ChangeEvent } from 'react'
 import { PcEdition, Platform, PsEdition } from 'data'
 import {
-    Input,
+    Checkbox,
     ExploreTitle,
     CurrentEdition,
     StyledExploreItem,
@@ -58,11 +58,7 @@ export const ExploreItem = ({
                     {characteristics[0]}
                 </CurrentEdition>
                 <SwichControl>
-                    <Input
-                        type="checkbox"
-                        onChange={onChangeChecked}
-                        checked={edition === 'EditionTwo'}
-                    />
+                    <Checkbox onChange={onChangeChecked} checked={edition === 'EditionTwo'} />
                     <Knob></Knob>
                 </SwichControl>
                 <CurrentEdition edition="EditionTwo" current={edition}>

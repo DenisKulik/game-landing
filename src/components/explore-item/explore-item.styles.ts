@@ -54,7 +54,9 @@ export const Knob = styled.span`
     transition: transform 0.2s ease-in-out;
 `
 
-export const Input = styled.input`
+export const Checkbox = styled.input.attrs(() => ({
+    type: 'checkbox',
+}))`
     width: 100%;
     height: 100%;
     position: relative;
