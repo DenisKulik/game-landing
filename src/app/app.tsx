@@ -7,6 +7,7 @@ import { About } from 'layout/sections/about'
 import { Explore } from 'layout/sections/explore'
 import { News } from 'layout/sections/news'
 import { FAQ } from 'layout/sections/faq'
+import { Footer } from 'layout/footer'
 
 export const App = () => {
     return (
@@ -19,6 +20,7 @@ export const App = () => {
             <Explore />
             <News />
             <FAQ />
+            <Footer />
         </AppWrapper>
     )
 }
