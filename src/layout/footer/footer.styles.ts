@@ -6,6 +6,10 @@ export const StyledFooter = styled.footer`
     padding-bottom: 1rem;
     text-align: center;
     background: url(${footerImg}) no-repeat right top;
+
+    nav > ul {
+        justify-content: center;
+    }
 `
 
 export const FooterInfo = styled.p`

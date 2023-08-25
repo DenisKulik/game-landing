@@ -19,7 +19,7 @@ export const Header = () => {
             <Container as={FlexContainer} justify="space-between" wrap="wrap">
                 <FlexContainer align="flex-start" gap="5rem" wrap="wrap">
                     <BurgerBtn callback={onClickBurgerMenu} active={isOpenedNav} />
-                    <NavBar isOpened={isOpenedNav} />
+                    <NavBar visible={isOpenedNav} />
                 </FlexContainer>
                 <Timer />
             </Container>

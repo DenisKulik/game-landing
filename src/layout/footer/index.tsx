@@ -6,14 +6,14 @@ import {
     StyledFooter,
 } from 'layout/footer/footer.styles.ts'
 import { Container } from 'components/common/container'
-import psLogo from 'assets/img/ps-logo.webp'
 import { NavBar } from 'components/common/nav-bar'
+import psLogo from 'assets/img/ps-logo.webp'
 
 export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <NavBar justify="space-between" />
+                <NavBar />
                 <FooterInfo>
                     Download of this product is subject to the PlayStation Network Terms of Service
                     and our Software Usage Terms plus any specific additional conditions applying to
