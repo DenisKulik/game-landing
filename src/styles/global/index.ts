@@ -6,7 +6,6 @@ export const theme: ThemeType = {
         secondary: '#FF4136',
         sea: '#A9C7C7',
         white: '#FFF',
-        black: '#000',
         grey: '#8C96A0',
         darkgrey: '#30373F',
         background: '#1B1F22',
@@ -33,11 +32,11 @@ export const Global = createGlobalStyle`
     font-family: Rubik, Roboto, sans-serif;
     font-size: 62.5%; // 1 rem = 10px
 
-    @media ${props => props.theme.media.large} {
+    @media ${theme.media.large} {
       font-size: 56.25%; // 1 rem = 9px
     }
 
-    @media ${props => props.theme.media.medium} {
+    @media ${theme.media.medium} {
       font-size: 50%; // 1 rem = 8px
     }
   }
@@ -49,7 +48,6 @@ export type ThemeType = {
         secondary: string
         sea: string
         white: string
-        black: string
         grey: string
         darkgrey: string
         background: string
