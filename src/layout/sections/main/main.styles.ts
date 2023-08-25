@@ -8,8 +8,8 @@ export const StyledMain = styled.section`
     min-height: 76.5rem;
     position: relative;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         content: '';
         width: 136.3rem;
         height: 76.5rem;
@@ -19,11 +19,11 @@ export const StyledMain = styled.section`
         right: 0;
     }
 
-    &:before {
+    &::before {
         background: url(${bg}) center/cover no-repeat;
     }
 
-    &:after {
+    &::after {
         background: url(${snow}) center/cover no-repeat;
         opacity: 0.1;
     }

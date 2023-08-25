@@ -16,8 +16,8 @@ export const StyledBurgerBtn = styled.button`
     &:hover > span {
         width: 12px;
 
-        &:before,
-        &:after {
+        &::before,
+        &::after {
             width: 25px;
         }
     }
@@ -31,8 +31,8 @@ export const Lines = styled.span<Props>`
     background: ${props => props.theme.colors.white};
     transition: width 0.2s ease-in-out;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       content: '';
       width: ${props => `${props.active ? 25 : 12}px`};
       height: 2px;
@@ -42,12 +42,12 @@ export const Lines = styled.span<Props>`
       transition: width 0.2s ease-in-out;
     }
 
-    &:before {
+    &::before {
       top: -7px;
       left: 0;
     }
 
-    &:after {
+    &::after {
       top: 7px;
       left: 0;
     }

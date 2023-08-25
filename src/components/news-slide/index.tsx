@@ -1,4 +1,12 @@
-import { NewsInfo, StyledNewsSlide } from 'components/news-slide/news-slide.styles.ts'
+import {
+    NewsInfo,
+    StyledNewsSlide,
+    GameName,
+    Date,
+    NewsDescr,
+    NewsImage,
+    NewsTitle,
+} from 'components/news-slide/news-slide.styles.ts'
 import { NewsItem } from 'data'
 import { FlexContainer } from 'components/common/flex-container'
 
@@ -10,13 +18,13 @@ export const NewsSlide = ({ item }: Props) => {
     return (
         <StyledNewsSlide>
             <NewsInfo justify="space-between">
-                <span>God of War Ragnarok</span>
-                <span>{item.date}</span>
+                <GameName>God of War Ragnarok</GameName>
+                <Date>{item.date}</Date>
             </NewsInfo>
-            <h3>{item.title}</h3>
-            <FlexContainer>
-                <img src={item.img} alt={item.title} width="278" height="249" />
-                <p>{item.description}</p>
+            <NewsTitle>{item.title}</NewsTitle>
+            <FlexContainer wrap="wrap" gap="2.4rem">
+                <NewsImage src={item.img} alt={item.title} width="278" height="249" />
+                <NewsDescr>{item.description}</NewsDescr>
             </FlexContainer>
         </StyledNewsSlide>
     )
