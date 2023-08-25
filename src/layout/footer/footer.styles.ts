@@ -23,7 +23,7 @@ export const FooterYear = styled.div`
     margin-bottom: 1.3rem;
 `
 
-export const FooterCopy = styled.div`
+export const FooterCopy = styled.small`
     font-size: 1.6rem;
     color: ${({ theme }) => theme.colors.grey};
 
