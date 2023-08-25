@@ -6,7 +6,7 @@ import {
     NewsDescr,
     NewsImage,
     NewsTitle,
-} from 'components/news-slide/news-slide.styles.ts'
+} from 'components/slider/news-slide/news-slide.styles.ts'
 import { NewsItem } from 'data'
 import { FlexContainer } from 'components/common/flex-container'
 

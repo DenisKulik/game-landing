@@ -6,7 +6,7 @@ import {
     Slides,
     StyledSlider,
 } from 'components/slider/slider.styles.ts'
-import { NewsSlide } from 'components/news-slide'
+import { NewsSlide } from 'components/slider/news-slide'
 import { NewsItem } from 'data'
 
 type Props = {
