@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { FlexContainer } from 'components/common/flex-container'
-import { AiFillPlusCircle } from 'react-icons/ai'
+import { RiAddCircleFill } from 'react-icons/ri'
 
 type AccordionProps = {
     active: boolean
@@ -28,7 +28,7 @@ export const Question = styled.p`
     font-weight: 600;
 `
 
-export const Plus = styled(AiFillPlusCircle)<AccordionProps>`
+export const Plus = styled(RiAddCircleFill)<AccordionProps>`
     color: ${({ theme }) => theme.colors.grey};
     cursor: pointer;
     transform: rotate(${({ active }) => (active ? 45 : 0)}deg);
