@@ -19,16 +19,13 @@ export const theme: ThemeType = {
 }
 
 export const Global = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-  }
-
   *,
   *::before,
   *::after {
+    margin: 0;
+    padding: 0;
     box-sizing: inherit;
+    scroll-behavior: smooth;
   }
 
   html {
