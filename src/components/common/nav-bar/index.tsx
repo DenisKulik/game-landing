@@ -10,13 +10,14 @@ import {
 } from 'components/common/nav-bar/nav-bar.styles.ts'
 import { FlexContainer } from 'components/common/flex-container'
 
-type Props = {
+type Props = Partial<{
     isOpened: boolean
-}
+    justify: string
+}>
 
 const navItems: string[] = ['editions', 'controller', 'about', 'explore', 'news', 'faq']
 
-export const NavBar = ({ isOpened }: Props) => {
+export const NavBar = ({ isOpened = true, justify = 'flex-start' }: Props) => {
     const navElements = navItems.map(elem => (
         <li key={elem}>
             <StyledLink href="#">{elem}</StyledLink>
@@ -24,8 +25,8 @@ export const NavBar = ({ isOpened }: Props) => {
     ))
 
     return (
-        <FlexContainer as={StyledNav} opened={isOpened} gap="3rem" wrap="wrap">
-            <FlexContainer as={LinkList} gap="3rem">
+        <FlexContainer as={StyledNav} opened={isOpened} justify={justify} gap="3rem" wrap="wrap">
+            <FlexContainer as={LinkList} gap="3rem" wrap="wrap">
                 {navElements}
             </FlexContainer>
             <LanguagesWrapper align="center">
