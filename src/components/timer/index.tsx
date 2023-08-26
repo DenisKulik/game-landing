@@ -19,6 +19,10 @@ export const Timer = () => {
                     <div>0</div>
                     <span>M</span>
                 </TimerItem>
+                <TimerItem>
+                    <div>0</div>
+                    <span>S</span>
+                </TimerItem>
             </FlexContainer>
         </StyledTimer>
     )
