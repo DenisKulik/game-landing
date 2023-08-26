@@ -50,5 +50,5 @@ export const MainTitle = styled.h1`
 export const MainDescr = styled.p`
     margin-bottom: 5rem;
     font-size: 1.8rem;
-    color: ${props => props.theme.colors.sea};
+    color: ${({ theme }) => theme.colors.sea};
 `

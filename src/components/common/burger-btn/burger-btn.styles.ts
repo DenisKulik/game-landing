@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-type Props = {
+type LinesProps = {
     active: boolean
 }
 
@@ -23,22 +23,22 @@ export const StyledBurgerBtn = styled.button`
     }
 `
 
-export const Lines = styled.span<Props>`
-    width: ${props => `${props.active ? 12 : 25}px`};
+export const Lines = styled.span<LinesProps>`
+    width: ${({ active }) => (active ? 12 : 25)}px;
     height: 2px;
     display: block;
     position: relative;
-    background: ${props => props.theme.colors.white};
+    background: ${({ theme }) => theme.colors.white};
     transition: width 0.2s ease-in-out;
 
     &::before,
     &::after {
       content: '';
-      width: ${props => `${props.active ? 25 : 12}px`};
+      width: ${({ active }) => `${active ? 25 : 12}px`};
       height: 2px;
       display: block;
       position: absolute;
-      background: ${props => props.theme.colors.white};
+      background: ${({ theme }) => theme.colors.white};
       transition: width 0.2s ease-in-out;
     }
 

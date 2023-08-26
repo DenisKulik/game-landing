@@ -26,14 +26,14 @@ export const GameName = styled.span`
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: ${props => props.theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
 `
 
 export const Date = styled.span`
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.7rem;
-    color: ${props => props.theme.colors.grey};
+    color: ${({ theme }) => theme.colors.grey};
 `
 
 export const NewsDescr = styled.p`

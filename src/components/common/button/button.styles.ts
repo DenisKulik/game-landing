@@ -1,16 +1,16 @@
 import styled, { css } from 'styled-components'
 import { Color, Size } from 'components/common/button/index.tsx'
 
-type Props = Partial<{
+type StyledButtonProps = Partial<{
     color: Color
     size: Size
 }>
 
-export const StyledButton = styled.button<Props>`
+export const StyledButton = styled.button<StyledButtonProps>`
     display: block;
     text-transform: uppercase;
     font-weight: 500;
-    color: ${props => props.theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
     cursor: pointer;
     border: none;
     border-radius: 6px;
@@ -18,33 +18,33 @@ export const StyledButton = styled.button<Props>`
 
     ${({ size }) =>
         (size === 'big' &&
-            css<Props>`
+            css<StyledButtonProps>`
                 font-size: 1.6rem;
                 padding: 1.4rem 1.9rem;
             `) ||
         (size === 'medium' &&
-            css<Props>`
+            css<StyledButtonProps>`
                 font-size: 1.6rem;
                 padding: 1.1rem 3.6rem;
             `) ||
         (size === 'small' &&
-            css<Props>`
+            css<StyledButtonProps>`
                 font-size: 1.3rem;
                 padding: 0.7rem 1.8rem;
             `)}
 
     ${({ color }) =>
         (color === 'primary' &&
-            css<Props>`
-                background-color: ${props => props.theme.colors.primary};
+            css<StyledButtonProps>`
+                background-color: ${({ theme }) => theme.colors.primary};
             `) ||
         (color === 'secondary' &&
-            css<Props>`
-                background-color: ${props => props.theme.colors.secondary};
+            css<StyledButtonProps>`
+                background-color: ${({ theme }) => theme.colors.secondary};
             `) ||
         (color === 'dark' &&
-            css<Props>`
-                background-color: ${props => props.theme.colors.darkgrey};
+            css<StyledButtonProps>`
+                background-color: ${({ theme }) => theme.colors.darkgrey};
             `)}
 
     &:hover {

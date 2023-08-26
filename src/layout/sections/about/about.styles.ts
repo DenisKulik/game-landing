@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components'
 import { SectionHeading } from 'components/common/section-heading'
 
-type Props = Partial<{
-    hidden: boolean
-}>
+type Props = {
+    hidden?: boolean
+}
 
 export const StyledAbout = styled.section`
     padding-top: 6rem;

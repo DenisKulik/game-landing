@@ -17,7 +17,7 @@ export const DualSenseInfo = styled.div`
 export const DualSenseDescr = styled.p`
     font-size: 1.8rem;
     line-height: 2.7rem;
-    color: ${props => props.theme.colors.sea};
+    color: ${({ theme }) => theme.colors.sea};
 
     &:not(:last-child) {
         margin-bottom: 2.2rem;
@@ -25,17 +25,17 @@ export const DualSenseDescr = styled.p`
 `
 
 export const GameName = styled.span`
-    color: ${props => props.theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
 `
 
 export const Discount = styled.span`
-    color: ${props => props.theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.secondary};
 `
 
 export const Price = styled.div`
     font-size: 3rem;
     font-weight: 700;
-    color: ${props => props.theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
 `
 
 export const ImageWrapper = styled.div`

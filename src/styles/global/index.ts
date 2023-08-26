@@ -32,11 +32,11 @@ export const Global = createGlobalStyle`
     font-family: Rubik, Roboto, sans-serif;
     font-size: 62.5%; // 1 rem = 10px
 
-    @media ${theme.media.large} {
+    @media ${({ theme }) => theme.media.large} {
       font-size: 56.25%; // 1 rem = 9px
     }
 
-    @media ${theme.media.medium} {
+    @media ${({ theme }) => theme.media.medium} {
       font-size: 50%; // 1 rem = 8px
     }
   }

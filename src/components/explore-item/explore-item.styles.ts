@@ -1,6 +1,15 @@
 import styled from 'styled-components'
 import { FlexContainer } from 'components/common/flex-container'
 
+type DescriptionProps = {
+    order: number
+}
+
+type CurrentEditionProps = {
+    edition: 'EditionOne' | 'EditionTwo'
+    current: 'EditionOne' | 'EditionTwo'
+}
+
 export const StyledExploreItem = styled.div`
     &:not(:last-child) {
         margin-bottom: 4.4rem;
@@ -38,7 +47,7 @@ export const SwichControl = styled.div`
     width: 5.4rem;
     height: 2.6rem;
     position: relative;
-    background-color: ${props => props.theme.colors.darkgrey};
+    background-color: ${({ theme }) => theme.colors.darkgrey};
     border-radius: 1.2rem;
 `
 
@@ -49,7 +58,7 @@ export const Knob = styled.span`
     top: 0.4rem;
     left: 0.4rem;
     border-radius: 50%;
-    background: ${props => props.theme.colors.primary};
+    background: ${({ theme }) => theme.colors.primary};
     transform: translateX(0);
     transition: transform 0.2s ease-in-out;
 `
@@ -124,16 +133,6 @@ export const EditionItem = styled.li`
     line-height: 3.6rem;
 
     & > span:first-child {
-        color: ${props => props.theme.colors.primary};
+        color: ${({ theme }) => theme.colors.primary};
     }
 `
-
-// types
-type DescriptionProps = {
-    order: number
-}
-
-type CurrentEditionProps = {
-    edition: 'EditionOne' | 'EditionTwo'
-    current: 'EditionOne' | 'EditionTwo'
-}

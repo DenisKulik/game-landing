@@ -4,7 +4,7 @@ import { FlexContainer } from 'components/common/flex-container'
 export const StyledTimer = styled(FlexContainer)`
     & > span {
         font-size: 1.6rem;
-        color: ${props => props.theme.colors.grey};
+        color: ${({ theme }) => theme.colors.grey};
     }
 `
 
@@ -15,11 +15,11 @@ export const TimerItem = styled.div`
     & > div {
         font-size: 4rem;
         font-weight: 700;
-        color: ${props => props.theme.colors.sea};
+        color: ${({ theme }) => theme.colors.sea};
     }
 
     & > span {
         font-size: 1.6rem;
-        color: ${props => props.theme.colors.grey};
+        color: ${({ theme }) => theme.colors.grey};
     }
 `

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const StyledEditionCard = styled.div`
     padding: 1.7rem;
     border-radius: 6px;
-    background: linear-gradient(180deg, #141615 0%, ${props => props.theme.colors.background} 100%);
+    background: linear-gradient(180deg, #141615 0%, ${({ theme }) => theme.colors.background} 100%);
 
     & > button {
         margin-left: auto;
@@ -28,7 +28,7 @@ export const Subtitle = styled.div`
     text-align: center;
     font-size: 1.6rem;
     font-weight: 500;
-    color: ${props => props.theme.colors.sea};
+    color: ${({ theme }) => theme.colors.sea};
 `
 
 export const Info = styled.ul`
@@ -37,8 +37,9 @@ export const Info = styled.ul`
 `
 
 export const InfoItem = styled.li`
-    color: ${props => props.theme.colors.grey};
+    color: ${({ theme }) => theme.colors.grey};
     font-size: 1.4rem;
+
     &:not(:last-child) {
         margin-bottom: 1.2rem;
     }
@@ -49,5 +50,5 @@ export const Price = styled.div`
     text-align: right;
     font-size: 1.9rem;
     font-weight: 700;
-    color: ${props => props.theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
 `
