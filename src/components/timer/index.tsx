@@ -3,7 +3,7 @@ import { FlexContainer } from 'components/common/flex-container'
 
 export const Timer = () => {
     return (
-        <StyledTimer as={FlexContainer} align="center" gap="1.9rem">
+        <StyledTimer align="center" gap="1.9rem">
             <span>Release</span>
 
             <FlexContainer justify="space-between" gap="0.5rem">

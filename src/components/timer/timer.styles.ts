@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { FlexContainer } from 'components/common/flex-container'
 
-export const StyledTimer = styled.div`
+export const StyledTimer = styled(FlexContainer)`
     & > span {
         font-size: 1.6rem;
         color: ${props => props.theme.colors.grey};
