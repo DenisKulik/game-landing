@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import bg from 'assets/img/bg.webp'
-import snow from 'assets/img/snow.gif'
+import snow from 'assets/img/snow.webp'
 import { moveInRight } from 'styles'
 
 export const StyledMain = styled.section`
