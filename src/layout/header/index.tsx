@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Container } from 'components/common/container'
 import { StyledHeader } from 'layout/header/header.styles.ts'
 import { NavBar } from 'components/common/nav-bar'
-import { BurgerBtn } from 'components/common/burger-btn'
+import { MenuBtn } from 'components/common/menu-btn'
 import { Timer } from 'components/timer'
 import { FlexContainer } from 'components/common/flex-container'
 
@@ -18,10 +18,10 @@ export const Header = () => {
         <StyledHeader>
             <Container as={FlexContainer} justify="space-between" wrap="wrap">
                 <FlexContainer align="flex-start" gap="5rem" wrap="wrap">
-                    <BurgerBtn callback={onClickBurgerMenu} active={isOpenedNav} />
+                    <MenuBtn callback={onClickBurgerMenu} active={isOpenedNav} />
                     <NavBar visible={isOpenedNav} />
                 </FlexContainer>
-                <Timer />
+                <Timer initialTime={86399} />
             </Container>
         </StyledHeader>
     )
