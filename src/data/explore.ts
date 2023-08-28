@@ -10,7 +10,7 @@ export const explore: Explore = {
         img: pcImg,
         bgCard: bgCardPc,
         characteristics: ['minimum', 'recommended'],
-        editionOne: {
+        min: {
             cpu: 'Intel i5-2500k (4 core 3.3 GHz) or AMD Ryzen 3 1200 (4 core 3.1 GHz)',
             ram: '8 GB',
             os: 'Windows 10 64-bit',
@@ -21,7 +21,7 @@ export const explore: Explore = {
             'dedicated video ram': '4 GB',
             price: 15.99,
         },
-        editionTwo: {
+        max: {
             cpu: 'Intel Core i7-4770 (4 core 3.4 GHz) or AMD Ryzen 5 1500X (4 core 3.5 GHz)',
             ram: '16 GB',
             os: 'Windows 10 64-bit',
@@ -39,7 +39,7 @@ export const explore: Explore = {
         img: psImg,
         bgCard: bgCardPs,
         characteristics: ['standard', 'limited'],
-        editionOne: {
+        min: {
             platform: 'PS4',
             premiere: '20.4.2018',
             publisher: 'Sony Interactive Entertainment Europe',
@@ -48,7 +48,7 @@ export const explore: Explore = {
             languages: 'English, Dutch, Polish, Russian, Turkish',
             price: 15.99,
         },
-        editionTwo: {
+        max: {
             platform: 'PS4',
             premiere: '20.4.2018',
             publisher: 'Sony Interactive Entertainment Europe',
@@ -95,11 +95,13 @@ export type Data<T> = {
     img: string
     bgCard: string
     characteristics: string[]
-    editionOne: T
-    editionTwo: T
+    min: T
+    max: T
 }
 
 export type Explore = {
     pc: Data<PcEdition>
     ps: Data<PsEdition>
 }
+
+export type EditionGame = 'min' | 'max'

@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react'
-import { PcEdition, Platform, PsEdition } from 'data'
+import { EditionGame, PcEdition, Platform, PsEdition } from 'data'
 import {
     Checkbox,
     ExploreTitle,
@@ -24,7 +24,7 @@ type Props = {
     img: string
     bgCard: string
     characteristics: string[]
-    edition: 'EditionOne' | 'EditionTwo'
+    edition: EditionGame
     data: PcEdition | PsEdition
     onChangeCurrentEdition: (platform: Platform, checked: boolean) => void
 }
@@ -54,18 +54,18 @@ export const ExploreItem = ({
         <StyledExploreItem>
             <ExploreTitle>{title}</ExploreTitle>
             <Switch justify="center" align="center" gap="1.5rem">
-                <CurrentEdition edition="EditionOne" current={edition}>
+                <CurrentEdition edition="min" current={edition}>
                     {characteristics[0]}
                 </CurrentEdition>
                 <SwichControl>
                     <Checkbox
                         onChange={onChangeChecked}
-                        checked={edition === 'EditionTwo'}
+                        checked={edition === 'max'}
                         aria-label="switch-editions"
                     />
                     <Knob></Knob>
                 </SwichControl>
-                <CurrentEdition edition="EditionTwo" current={edition}>
+                <CurrentEdition edition="max" current={edition}>
                     {characteristics[1]}
                 </CurrentEdition>
             </Switch>

@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { FlexContainer } from 'components/common/flex-container'
+import { EditionGame } from 'data'
 
 type DescriptionProps = {
     order: number
 }
 
 type CurrentEditionProps = {
-    edition: 'EditionOne' | 'EditionTwo'
-    current: 'EditionOne' | 'EditionTwo'
+    edition: EditionGame
+    current: EditionGame
 }
 
 export const StyledExploreItem = styled.div`

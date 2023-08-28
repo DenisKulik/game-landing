@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { explore, PcEdition, Platform, PsEdition } from 'data'
+import { EditionGame, explore, PcEdition, Platform, PsEdition } from 'data'
 import { ExploreHeading, StyledExplore } from 'layout/sections/explore/explore.styles.ts'
 import { Container } from 'components/common/container'
 import { ExploreItem } from 'components/explore-item'
@@ -7,12 +7,12 @@ import { ExploreItem } from 'components/explore-item'
 export const Explore = () => {
     const [currentEdition, setCurrentEdition] = useState({
         pc: {
-            edition: 'EditionOne' as Edition,
-            data: explore.pc.editionOne as PcEdition,
+            edition: 'min' as EditionGame,
+            data: explore.pc.min as PcEdition,
         },
         ps: {
-            edition: 'EditionOne' as Edition,
-            data: explore.ps.editionOne as PsEdition,
+            edition: 'min' as EditionGame,
+            data: explore.ps.min as PsEdition,
         },
     })
 
@@ -21,8 +21,8 @@ export const Explore = () => {
             ...currentEdition,
             [platform]: {
                 ...currentEdition[platform],
-                edition: checked ? 'EditionTwo' : 'EditionOne',
-                data: checked ? explore[platform].editionTwo : explore[platform].editionOne,
+                edition: checked ? 'max' : 'min',
+                data: checked ? explore[platform].max : explore[platform].min,
             },
         })
     }
@@ -52,5 +52,3 @@ export const Explore = () => {
         </StyledExplore>
     )
 }
-
-export type Edition = 'EditionOne' | 'EditionTwo'
