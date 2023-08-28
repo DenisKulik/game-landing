@@ -22,10 +22,10 @@ export const Slider = ({ data }: Props) => {
                 {slides}
             </Slides>
             <ButtonPrev>
-                <ArrowLeft size="3rem" />
+                <ArrowLeft />
             </ButtonPrev>
             <ButtonNext>
-                <ArrowRight size="3rem" />
+                <ArrowRight />
             </ButtonNext>
         </StyledSlider>
     )
