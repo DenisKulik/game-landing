@@ -24,7 +24,11 @@ export const AccordionItem = ({ item }: Props) => {
         <StyledAccordionItem>
             <AccordionHeader onClick={onOpenItem} justify="space-between" align="center">
                 <Question>{item.question}</Question>
-                <Plus size="3rem" active={active ? active.toString() : undefined} />
+                <Plus
+                    size="3rem"
+                    active={active ? active.toString() : undefined}
+                    aria-label="toggle-answer"
+                />
             </AccordionHeader>
             <AccordionContent>
                 <Answer active={active ? active.toString() : undefined}>{item.answer}</Answer>

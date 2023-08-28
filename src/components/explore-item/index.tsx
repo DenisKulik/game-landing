@@ -58,7 +58,11 @@ export const ExploreItem = ({
                     {characteristics[0]}
                 </CurrentEdition>
                 <SwichControl>
-                    <Checkbox onChange={onChangeChecked} checked={edition === 'EditionTwo'} />
+                    <Checkbox
+                        onChange={onChangeChecked}
+                        checked={edition === 'EditionTwo'}
+                        aria-label="switch-editions"
+                    />
                     <Knob></Knob>
                 </SwichControl>
                 <CurrentEdition edition="EditionTwo" current={edition}>
@@ -69,7 +73,7 @@ export const ExploreItem = ({
             <FlexContainer justify="center" gap="10rem" wrap="wrap">
                 <ImageWrapper align="flex-end">
                     <ImageInner style={{ backgroundImage: `url(${bgCard})` }}>
-                        <Image src={img} />
+                        <Image src={img} alt={platform} />
                     </ImageInner>
                 </ImageWrapper>
 

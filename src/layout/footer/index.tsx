@@ -20,7 +20,7 @@ export const Footer = () => {
                     this product. If you do not wish to accept these terms, do not download this
                     product. See Terms of Service for more important information.
                 </FooterInfo>
-                <FooterImg src={psLogo} alt="ps-logo" />
+                <FooterImg src={psLogo} alt="ps-logo" width="45" height="35" />
                 <FooterYear>2023</FooterYear>
                 <FooterCopy>
                     Developed by{' '}

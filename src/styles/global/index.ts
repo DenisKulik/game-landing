@@ -24,7 +24,11 @@ export const Global = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    scroll-behavior: smooth;
+  }
+  
+  *:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid ${({ theme }) => theme.colors.primary};
   }
 
   html {
@@ -38,6 +42,12 @@ export const Global = createGlobalStyle`
 
     @media ${({ theme }) => theme.media.medium} {
       font-size: 50%; // 1 rem = 8px
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
     }
   }
 `

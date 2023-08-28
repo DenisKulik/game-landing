@@ -7,7 +7,7 @@ type Props = {
 
 export const BurgerBtn = ({ active = false, callback }: Props) => {
     return (
-        <StyledBurgerBtn onClick={callback}>
+        <StyledBurgerBtn onClick={callback} aria-label="navigation-menu">
             <Lines active={active ? active.toString() : undefined}></Lines>
         </StyledBurgerBtn>
     )

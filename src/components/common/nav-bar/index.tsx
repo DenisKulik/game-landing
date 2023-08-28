@@ -9,14 +9,14 @@ const navItems: string[] = ['editions', 'controller', 'about', 'explore', 'news'
 
 export const NavBar = ({ visible = true }: Props) => {
     const navElements = navItems.map(elem => (
-        <li key={elem}>
+        <li key={elem} role="menuitem">
             <StyledLink href="#">{elem}</StyledLink>
         </li>
     ))
 
     return (
         <StyledNav visible={visible ? visible.toString() : undefined}>
-            <FlexContainer as={LinkList} gap="3rem" wrap="wrap">
+            <FlexContainer as={LinkList} gap="3rem" wrap="wrap" role="menu">
                 {navElements}
             </FlexContainer>
         </StyledNav>
