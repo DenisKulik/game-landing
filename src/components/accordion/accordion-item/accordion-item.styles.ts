@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { FlexContainer } from 'components/common/flex-container'
-import { RiAddCircleFill } from 'react-icons/ri'
 
 type AccordionProps = {
     active?: string
@@ -28,14 +27,26 @@ export const Question = styled.p`
     font-weight: 600;
 `
 
-export const Plus = styled(RiAddCircleFill)<AccordionProps>`
-    color: ${({ theme }) => theme.colors.grey};
+export const Plus = styled.span<AccordionProps>`
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
-    transform: rotate(${({ active }) => (active ? 45 : 0)}deg);
-    transition: transform 0.3s ease-in-out;
+    position: relative;
+    border-radius: 50%;
+    background-color: ${({ theme }) => theme.colors.darkgrey};
+
+    &::before {
+        font-size: 2.5rem;
+        content: '+';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(${({ active }) => (active ? 45 : 0)}deg);
+        transition: transform 0.3s ease-in-out;
+    }
 
     &:hover {
-        color: ${({ theme }) => theme.colors.white};
+        background-color: ${({ theme }) => theme.colors.grey};
     }
 `
 
