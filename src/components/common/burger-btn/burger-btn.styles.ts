@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 type LinesProps = {
-    active: boolean
+    active?: string
 }
 
 export const StyledBurgerBtn = styled.button`

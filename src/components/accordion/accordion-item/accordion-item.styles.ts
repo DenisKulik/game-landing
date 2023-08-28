@@ -3,7 +3,7 @@ import { FlexContainer } from 'components/common/flex-container'
 import { RiAddCircleFill } from 'react-icons/ri'
 
 type AccordionProps = {
-    active: boolean
+    active?: string
 }
 
 export const StyledAccordionItem = styled.div`

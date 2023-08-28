@@ -15,7 +15,7 @@ export const NavBar = ({ visible = true }: Props) => {
     ))
 
     return (
-        <StyledNav visible={visible}>
+        <StyledNav visible={visible ? visible.toString() : undefined}>
             <FlexContainer as={LinkList} gap="3rem" wrap="wrap">
                 {navElements}
             </FlexContainer>

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 type StyledNavProps = {
-    visible: boolean
+    visible?: string
 }
 
 export const StyledNav = styled.nav<StyledNavProps>`
