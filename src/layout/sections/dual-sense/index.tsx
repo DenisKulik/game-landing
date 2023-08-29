@@ -4,6 +4,7 @@ import {
     DualSenseHeading,
     DualSenseImage,
     DualSenseInfo,
+    DualSenseWrapper,
     GameName,
     ImageWrapper,
     Price,
@@ -23,7 +24,7 @@ export const DualSense = ({ onClickBuyNow }: Props) => {
         <StyledDualSense>
             <Container>
                 <DualSenseHeading>DualSense</DualSenseHeading>
-                <FlexContainer justify="center" wrap="wrap" gap="15rem">
+                <DualSenseWrapper justify="center" gap="15rem">
                     <DualSenseInfo>
                         <DualSenseDescr>
                             You can also buy an exclusive controller with the{' '}
@@ -48,7 +49,7 @@ export const DualSense = ({ onClickBuyNow }: Props) => {
                     <ImageWrapper>
                         <DualSenseImage src={dual} alt="dual-sense" width="340" height="309" />
                     </ImageWrapper>
-                </FlexContainer>
+                </DualSenseWrapper>
             </Container>
         </StyledDualSense>
     )

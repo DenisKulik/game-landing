@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { SectionHeading } from 'components/common/section-heading'
 import { levitation } from 'styles/animations/levitation.ts'
+import { FlexContainer } from 'components/common/flex-container'
 
 export const StyledDualSense = styled.section`
     padding-top: 6rem;
@@ -8,6 +9,13 @@ export const StyledDualSense = styled.section`
 
 export const DualSenseHeading = styled(SectionHeading)`
     margin-bottom: 2rem;
+`
+export const DualSenseWrapper = styled(FlexContainer)`
+    @media ${({ theme }) => theme.media.medium} {
+        flex-direction: column;
+        align-items: center;
+        gap: 7.5rem;
+    }
 `
 
 export const DualSenseInfo = styled.div`
@@ -52,6 +60,10 @@ export const ImageWrapper = styled.div`
         transform: translate(-50%, -50%);
         background-color: rgba(79, 96, 152, 0.8);
         filter: blur(75px);
+    }
+
+    @media ${({ theme }) => theme.media.medium} {
+        order: -1;
     }
 `
 
