@@ -4,7 +4,7 @@ import snow from 'assets/img/snow.webp'
 import { moveInRight } from 'styles'
 
 export const StyledMain = styled.section`
-    padding-top: 18rem;
+    padding-top: 180px;
     min-height: 76.5rem;
     position: relative;
 
@@ -37,6 +37,11 @@ export const MainContainer = styled.div`
 
 export const MainWrapper = styled.div`
     max-width: 53.8rem;
+
+    @media ${({ theme }) => theme.media.small} {
+        max-width: 100%;
+        text-align: center;
+    }
 `
 
 export const MainTitle = styled.h1`

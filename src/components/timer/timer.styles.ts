@@ -6,6 +6,11 @@ export const StyledTimer = styled(FlexContainer)`
         font-size: 1.6rem;
         color: ${({ theme }) => theme.colors.grey};
     }
+
+    @media ${({ theme }) => theme.media.medium} {
+        align-self: center;
+        flex-direction: column;
+    }
 `
 
 export const TimerItem = styled.div`
