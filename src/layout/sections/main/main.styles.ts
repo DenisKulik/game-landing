@@ -4,7 +4,7 @@ import snow from 'assets/img/snow.webp'
 import { moveInRight } from 'styles'
 
 export const StyledMain = styled.section`
-    padding-top: 180px;
+    padding-top: 23rem;
     min-height: 76.5rem;
     position: relative;
 
@@ -26,6 +26,12 @@ export const StyledMain = styled.section`
     &::after {
         background: url(${snow}) center/cover no-repeat;
         opacity: 0.1;
+    }
+
+    @media ${({ theme }) => theme.media.small} {
+        button {
+            margin: 0 auto;
+        }
     }
 `
 
@@ -50,6 +56,11 @@ export const MainTitle = styled.h1`
     font-weight: 600;
     line-height: 10rem;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    @media ${({ theme }) => theme.media.small} {
+        font-size: 6rem;
+        line-height: 6rem;
+    }
 `
 
 export const MainDescr = styled.p`
