@@ -27,6 +27,7 @@ type Props = {
     edition: EditionGame
     data: PcEdition | PsEdition
     onChangeCurrentEdition: (platform: Platform, checked: boolean) => void
+    onClickBuyNow: (edition: string, price: number) => void
 }
 
 export const ExploreItem = ({
@@ -38,6 +39,7 @@ export const ExploreItem = ({
     edition,
     data,
     onChangeCurrentEdition,
+    onClickBuyNow,
 }: Props) => {
     const EditionElements = Object.entries(data).map(([key, value], idx) => (
         <EditionItem key={idx}>
@@ -79,7 +81,12 @@ export const ExploreItem = ({
 
                 <Description order={platform === 'ps' ? -1 : 0}>
                     <EditionList>{EditionElements}</EditionList>
-                    <Button title="buy now" color="secondary" size="small" />
+                    <Button
+                        title="buy now"
+                        color="secondary"
+                        size="small"
+                        callback={() => onClickBuyNow(`${platform} edition`, data.price)}
+                    />
                 </Description>
             </FlexContainer>
         </StyledExploreItem>

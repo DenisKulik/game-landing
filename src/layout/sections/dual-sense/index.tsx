@@ -14,7 +14,11 @@ import { FlexContainer } from 'components/common/flex-container'
 import dual from 'assets/img/dual.webp'
 import { Button } from 'components/common/button'
 
-export const DualSense = () => {
+type Props = {
+    onClickBuyNow: (edition: string, price: number) => void
+}
+
+export const DualSense = ({ onClickBuyNow }: Props) => {
     return (
         <StyledDualSense>
             <Container>
@@ -35,6 +39,9 @@ export const DualSense = () => {
                                 title="buy dualsense with a game"
                                 color="secondary"
                                 size="big"
+                                callback={() =>
+                                    onClickBuyNow('Controller with Digital Deluxe Edition', 35.99)
+                                }
                             />
                         </FlexContainer>
                     </DualSenseInfo>

@@ -4,8 +4,14 @@ import { EditionsHeading, StyledEditions } from 'layout/sections/editions/editio
 import { FlexContainer } from 'components/common/flex-container'
 import { EditionCard } from 'components/edition-card'
 
-export const Editions = () => {
-    const EditionCards = editions.map((card, idx) => <EditionCard key={idx} card={card} />)
+type Props = {
+    onClickBuyNow: (edition: string, price: number) => void
+}
+
+export const Editions = ({ onClickBuyNow }: Props) => {
+    const EditionCards = editions.map((card, idx) => (
+        <EditionCard onClickBuyNow={onClickBuyNow} key={idx} card={card} />
+    ))
 
     return (
         <StyledEditions>

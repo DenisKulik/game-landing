@@ -4,7 +4,11 @@ import { ExploreHeading, StyledExplore } from 'layout/sections/explore/explore.s
 import { Container } from 'components/common/container'
 import { ExploreItem } from 'components/explore-item'
 
-export const Explore = () => {
+type Props = {
+    onClickBuyNow: (edition: string, price: number) => void
+}
+
+export const Explore = ({ onClickBuyNow }: Props) => {
     const [currentEdition, setCurrentEdition] = useState({
         pc: {
             edition: 'min' as EditionGame,
@@ -40,6 +44,7 @@ export const Explore = () => {
             characteristics={value.characteristics}
             edition={currentEdition[value.platform].edition}
             data={currentEdition[value.platform].data}
+            onClickBuyNow={onClickBuyNow}
         />
     ))
 

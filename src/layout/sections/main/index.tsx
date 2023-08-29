@@ -8,7 +8,11 @@ import {
     MainContainer,
 } from 'layout/sections/main/main.styles.ts'
 
-export const Main = () => {
+type Props = {
+    onClickBuyNow: (edition: string, price: number) => void
+}
+
+export const Main = ({ onClickBuyNow }: Props) => {
     return (
         <StyledMain>
             <MainContainer as={Container}>
@@ -19,7 +23,10 @@ export const Main = () => {
                         Fimbulwinter, a great winter that spans three summers, is drawing to a close
                         which will begin the prophesied Ragnarök.
                     </MainDescr>
-                    <Button title="buy now" />
+                    <Button
+                        title="buy now"
+                        callback={() => onClickBuyNow('standard edition', 19.99)}
+                    />
                 </MainWrapper>
             </MainContainer>
         </StyledMain>
