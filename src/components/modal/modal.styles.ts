@@ -19,6 +19,7 @@ export const StyledModal = styled.div<StyledModalProps>`
     background-repeat: no-repeat;
     background-position: top;
     border-radius: 1.2rem;
+    border: 1px solid ${({ theme }) => theme.colors.darkgrey};
     transform: translate(-50%, -50%);
     transition: all 0.2s ease-in-out;
 
@@ -32,6 +33,7 @@ export const ModalClose = styled.div`
     width: 15px;
     text-align: center;
     margin-left: auto;
+    margin-bottom: 2rem;
     cursor: pointer;
 
     &:hover {
