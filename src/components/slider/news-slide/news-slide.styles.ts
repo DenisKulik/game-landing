@@ -3,6 +3,7 @@ import { FlexContainer } from 'components/common/flex-container'
 
 export const StyledNewsSlide = styled.div`
     max-width: 61.5rem;
+    width: 100%;
     padding: 2rem;
     border-radius: 6px;
     background-color: #141615;
@@ -11,9 +12,19 @@ export const StyledNewsSlide = styled.div`
     &:hover {
         background-color: ${({ theme }) => theme.colors.darkgrey};
     }
+
+    @media ${({ theme }) => theme.media.small} {
+        max-width: 40rem;
+    }
 `
 
-export const NewsInfo = styled(FlexContainer)``
+export const NewsContent = styled(FlexContainer)`
+    @media ${({ theme }) => theme.media.small} {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+`
 
 export const NewsTitle = styled.h3`
     margin-bottom: 1.6rem;
@@ -38,9 +49,13 @@ export const Date = styled.span`
 
 export const NewsDescr = styled.p`
     max-width: 25.6rem;
-    font-size: 1.2rem;
+    font-size: 12px;
     line-height: 1.7rem;
     color: ${({ theme }) => theme.colors.grey};
+
+    @media ${({ theme }) => theme.media.small} {
+        max-width: 100%;
+    }
 `
 
 export const NewsImage = styled.img``

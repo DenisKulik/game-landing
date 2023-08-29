@@ -1,0 +1,40 @@
+.alice-carousel__stage-item {
+    margin-right: 2rem;
+}
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.alice-carousel__prev-btn {
+    left: 5rem;
+}
+
+.alice-carousel__next-btn {
+    right: 5rem;
+}
+
+.alice-carousel__prev-btn-item,
+.alice-carousel__next-btn-item {
+    width: 32px;
+    height: 32px;
+    line-height: 20px;
+    border-radius: 6px;
+    background-color: #8C96A0;
+}
+
+.alice-carousel__prev-btn-item:hover,
+.alice-carousel__next-btn-item:hover {
+    background-color: #8856D9;
+}
+
+.alice-carousel__prev-btn-item > span,
+.alice-carousel__next-btn-item > span {
+    color: white;
+}
