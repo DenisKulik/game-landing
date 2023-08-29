@@ -14,6 +14,7 @@
         "@types/styled-components": "^5.1.26",
         "path": "^0.12.7",
         "react": "^18.2.0",
+        "react-alice-carousel": "^2.7.1",
         "react-dom": "^18.2.0",
         "styled-components": "^6.0.7",
         "vite-tsconfig-paths": "^4.2.0"
