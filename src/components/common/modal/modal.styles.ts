@@ -21,7 +21,7 @@ const Modal = styled.div<StyledModalProps>`
     border-radius: 1.2rem;
     border: 1px solid ${({ theme }) => theme.colors.darkgrey};
     transform: translate(-50%, -50%);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     button {
         margin-top: 1.9rem;

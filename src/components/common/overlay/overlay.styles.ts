@@ -12,6 +12,7 @@ const Overlay = styled.div<StyledOverlayProps>`
     opacity: 0.7;
     visibility: ${({ active }) => (active ? 'visible' : 'hidden')};
     background-color: ${({ theme }) => theme.colors.background};
+    transition: all 0.15s ease-in-out;
 `
 
 export const S = {
