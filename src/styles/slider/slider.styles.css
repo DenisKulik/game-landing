@@ -38,3 +38,9 @@
 .alice-carousel__next-btn-item > span {
     color: white;
 }
+
+@media screen and (max-width: 500px) {
+    .alice-carousel__stage-item {
+        margin-right: 0.5rem;
+    }
+}
