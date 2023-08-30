@@ -22,7 +22,7 @@ export const AccordionHeader = styled(FlexContainer)`
 `
 
 export const Question = styled.p`
-    text-align: center;
+    text-align: left;
     font-size: 1.7rem;
     font-weight: 600;
 `
