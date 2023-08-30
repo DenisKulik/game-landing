@@ -1,4 +1,5 @@
 import { ChangeEvent } from 'react'
+
 import { EditionGame, PcEdition, Platform, PsEdition } from 'data'
 import { S } from 'components/explore-items/explore-item/explore-item.styles.ts'
 import { FlexContainer } from 'components/common/flex-container'

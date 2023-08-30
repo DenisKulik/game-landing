@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { SectionHeading } from 'components/common/section-heading'
 
 const News = styled.section`
-    padding-top: 10rem;
+    padding-top: 6rem;
 `
 
 const NewsHeading = styled(SectionHeading)`

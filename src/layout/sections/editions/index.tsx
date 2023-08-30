@@ -1,3 +1,5 @@
+import { Bounce } from 'react-awesome-reveal'
+
 import { editions } from 'data'
 import { Container } from 'components/common/container'
 import { S } from 'layout/sections/editions/editions.styles.ts'
@@ -18,7 +20,9 @@ export const Editions = ({ onClickBuyNow }: Props) => {
             <Container>
                 <S.EditionsHeading>Editions</S.EditionsHeading>
                 <FlexContainer justify="center" wrap="wrap" gap="1.5rem">
-                    {EditionCards}
+                    <Bounce direction="left" duration={600} triggerOnce={true} cascade={true}>
+                        {EditionCards}
+                    </Bounce>
                 </FlexContainer>
             </Container>
         </S.Editions>

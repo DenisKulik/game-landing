@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { JackInTheBox } from 'react-awesome-reveal'
+
 import { EditionGame, explore, PcEdition, Platform, PsEdition } from 'data'
 import { ExploreItem } from 'components/explore-items/explore-item'
 
@@ -46,5 +48,9 @@ export const ExploreItems = ({ onClickBuyNow }: Props) => {
         />
     ))
 
-    return <>{exploreItems}</>
+    return (
+        <JackInTheBox duration={700} triggerOnce={true}>
+            {exploreItems}
+        </JackInTheBox>
+    )
 }

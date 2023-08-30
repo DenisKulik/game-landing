@@ -1,6 +1,7 @@
-import { S } from './go-top-btn.styles.ts'
-import { animateScroll as scroll } from 'react-scroll'
 import { useEffect, useState } from 'react'
+import { animateScroll as scroll } from 'react-scroll'
+
+import { S } from './go-top-btn.styles.ts'
 
 export const GoTopBtn = () => {
     const [showBtn, setShowBtn] = useState(false)

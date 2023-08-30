@@ -12,9 +12,7 @@ type CurrentEditionProps = {
 }
 
 const ExploreItem = styled.div`
-    &:not(:last-child) {
-        margin-bottom: 4.4rem;
-    }
+    margin-bottom: 4.4rem;
 
     ${FlexContainer} {
         @media ${({ theme }) => theme.media.large} {

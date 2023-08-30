@@ -10,9 +10,7 @@ const AccordionItem = styled.div`
     transform: translate(0);
     border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
 
-    &:not(:last-child) {
-        margin-bottom: 1.8rem;
-    }
+    margin-bottom: 1.8rem;
 `
 
 const AccordionHeader = styled(FlexContainer)`
