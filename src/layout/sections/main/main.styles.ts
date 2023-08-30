@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import bg from 'assets/img/bg.webp'
 import snow from 'assets/img/snow.webp'
 import { moveInRight } from 'styles'
+import { Container } from 'components/common/container'
 
-export const StyledMain = styled.section`
+const Main = styled.section`
     padding-top: 23rem;
     min-height: 76.5rem;
     position: relative;
@@ -35,13 +36,13 @@ export const StyledMain = styled.section`
     }
 `
 
-export const MainContainer = styled.div`
+const MainContainer = styled(Container)`
     position: relative;
     z-index: 10;
     animation: ${moveInRight} 1.2s ease-in-out;
 `
 
-export const MainWrapper = styled.div`
+const MainWrapper = styled.div`
     max-width: 53.8rem;
 
     @media ${({ theme }) => theme.media.small} {
@@ -50,7 +51,7 @@ export const MainWrapper = styled.div`
     }
 `
 
-export const MainTitle = styled.h1`
+const MainTitle = styled.h1`
     margin-bottom: 2.6rem;
     font-size: 10rem;
     font-weight: 600;
@@ -63,8 +64,16 @@ export const MainTitle = styled.h1`
     }
 `
 
-export const MainDescr = styled.p`
+const MainDescription = styled.p`
     margin-bottom: 5rem;
     font-size: 1.8rem;
     color: ${({ theme }) => theme.colors.sea};
 `
+
+export const S = {
+    Main,
+    MainContainer,
+    MainWrapper,
+    MainTitle,
+    MainDescription,
+}

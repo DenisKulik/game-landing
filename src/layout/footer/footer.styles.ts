@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import footerImg from 'assets/img/footer.webp'
 
-export const StyledFooter = styled.footer`
+const Footer = styled.footer`
     padding-top: 15rem;
     padding-bottom: 1rem;
     text-align: center;
@@ -12,22 +12,22 @@ export const StyledFooter = styled.footer`
     }
 `
 
-export const FooterInfo = styled.p`
+const FooterInfo = styled.p`
     margin-top: 5rem;
     margin-bottom: 3.8rem;
     color: ${({ theme }) => theme.colors.grey};
     font-size: 1.6rem;
 `
 
-export const FooterImg = styled.img`
+const FooterImg = styled.img`
     margin-bottom: 2rem;
 `
 
-export const FooterYear = styled.div`
+const FooterYear = styled.div`
     margin-bottom: 1.3rem;
 `
 
-export const FooterCopy = styled.small`
+const FooterCopy = styled.small`
     font-size: 1.6rem;
     color: ${({ theme }) => theme.colors.grey};
 
@@ -36,3 +36,11 @@ export const FooterCopy = styled.small`
         color: ${({ theme }) => theme.colors.primary};
     }
 `
+
+export const S = {
+    Footer,
+    FooterInfo,
+    FooterImg,
+    FooterYear,
+    FooterCopy,
+}

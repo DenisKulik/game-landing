@@ -1,4 +1,4 @@
-import { ExploreHeading, StyledExplore } from 'layout/sections/explore/explore.styles.ts'
+import { S } from 'layout/sections/explore/explore.styles.ts'
 import { Container } from 'components/common/container'
 import { ExploreItems } from 'components/explore-items'
 
@@ -8,11 +8,11 @@ type Props = {
 
 export const Explore = ({ onClickBuyNow }: Props) => {
     return (
-        <StyledExplore>
+        <S.Explore>
             <Container>
-                <ExploreHeading>Explore the God of War series</ExploreHeading>
+                <S.ExploreHeading>Explore the God of War series</S.ExploreHeading>
                 <ExploreItems onClickBuyNow={onClickBuyNow} />
             </Container>
-        </StyledExplore>
+        </S.Explore>
     )
 }

@@ -1,4 +1,4 @@
-import { Lines, StyledBurgerBtn } from 'components/common/menu-btn/burger-btn.styles.ts'
+import { S } from 'components/common/menu-btn/burger-btn.styles.ts'
 
 type Props = {
     active?: boolean
@@ -7,8 +7,8 @@ type Props = {
 
 export const MenuBtn = ({ active = false, callback }: Props) => {
     return (
-        <StyledBurgerBtn onClick={callback} aria-label="navigation-menu">
-            <Lines active={active ? active.toString() : undefined}></Lines>
-        </StyledBurgerBtn>
+        <S.BurgerBtn onClick={callback} aria-label="navigation-menu">
+            <S.Lines active={active ? active.toString() : undefined}></S.Lines>
+        </S.BurgerBtn>
     )
 }

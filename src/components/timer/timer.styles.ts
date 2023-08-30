@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { FlexContainer } from 'components/common/flex-container'
 
-export const StyledTimer = styled(FlexContainer)`
+const Timer = styled(FlexContainer)`
     & > span {
         font-size: 1.6rem;
         color: ${({ theme }) => theme.colors.grey};
@@ -13,7 +13,7 @@ export const StyledTimer = styled(FlexContainer)`
     }
 `
 
-export const TimerItem = styled.div`
+const TimerItem = styled.div`
     min-width: 5.5rem;
     text-align: center;
 
@@ -28,3 +28,8 @@ export const TimerItem = styled.div`
         color: ${({ theme }) => theme.colors.grey};
     }
 `
+
+export const S = {
+    Timer,
+    TimerItem,
+}

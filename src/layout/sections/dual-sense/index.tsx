@@ -1,15 +1,4 @@
-import {
-    Discount,
-    DualSenseDescr,
-    DualSenseHeading,
-    DualSenseImage,
-    DualSenseInfo,
-    DualSenseWrapper,
-    GameName,
-    ImageWrapper,
-    Price,
-    StyledDualSense,
-} from 'layout/sections/dual-sense/dual-sense.styles.ts'
+import { S } from 'layout/sections/dual-sense/dual-sense.styles.ts'
 import { Container } from 'components/common/container'
 import { FlexContainer } from 'components/common/flex-container'
 import dual from 'assets/img/dual.webp'
@@ -21,21 +10,21 @@ type Props = {
 
 export const DualSense = ({ onClickBuyNow }: Props) => {
     return (
-        <StyledDualSense>
+        <S.DualSense>
             <Container>
-                <DualSenseHeading>DualSense</DualSenseHeading>
-                <DualSenseWrapper justify="center" gap="15rem">
-                    <DualSenseInfo>
-                        <DualSenseDescr>
+                <S.DualSenseHeading>DualSense</S.DualSenseHeading>
+                <S.DualSenseWrapper justify="center" gap="15rem">
+                    <S.DualSenseInfo>
+                        <S.DualSenseDescription>
                             You can also buy an exclusive controller with the{' '}
-                            <GameName>God of War Ragnarok</GameName> theme for PS5
-                        </DualSenseDescr>
-                        <DualSenseDescr>
+                            <S.GameName>God of War Ragnarok</S.GameName> theme for PS5
+                        </S.DualSenseDescription>
+                        <S.DualSenseDescription>
                             If you purchase a controller and a game (any edition), you will receive
-                            a <Discount>15%</Discount> discount on two items.
-                        </DualSenseDescr>
+                            a <S.Discount>15%</S.Discount> discount on two items.
+                        </S.DualSenseDescription>
                         <FlexContainer align="center" gap="3.3rem">
-                            <Price>35.99$</Price>
+                            <S.Price>35.99$</S.Price>
                             <Button
                                 title="buy dualsense with a game"
                                 color="secondary"
@@ -45,12 +34,12 @@ export const DualSense = ({ onClickBuyNow }: Props) => {
                                 }
                             />
                         </FlexContainer>
-                    </DualSenseInfo>
-                    <ImageWrapper>
-                        <DualSenseImage src={dual} alt="dual-sense" width="340" height="309" />
-                    </ImageWrapper>
-                </DualSenseWrapper>
+                    </S.DualSenseInfo>
+                    <S.ImageWrapper>
+                        <S.DualSenseImage src={dual} alt="dual-sense" width="340" height="309" />
+                    </S.ImageWrapper>
+                </S.DualSenseWrapper>
             </Container>
-        </StyledDualSense>
+        </S.DualSense>
     )
 }

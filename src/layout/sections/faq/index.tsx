@@ -1,15 +1,15 @@
-import { FAQHeading, StyledFAQ } from 'layout/sections/faq/faq.styles.ts'
+import { S } from 'layout/sections/faq/faq.styles.ts'
 import { Accordion } from 'components/accordion'
 import { faq } from 'data'
 import { Container } from 'components/common/container'
 
 export const FAQ = () => {
     return (
-        <StyledFAQ>
+        <S.FAQ>
             <Container>
-                <FAQHeading>FAQ</FAQHeading>
+                <S.FAQHeading>FAQ</S.FAQHeading>
                 <Accordion data={faq} />
             </Container>
-        </StyledFAQ>
+        </S.FAQ>
     )
 }

@@ -1,12 +1,5 @@
 import { FAQItem } from 'data'
-import {
-    AccordionContent,
-    AccordionHeader,
-    Answer,
-    Plus,
-    Question,
-    StyledAccordionItem,
-} from 'components/accordion/accordion-item/accordion-item.styles.ts'
+import { S } from 'components/accordion/accordion-item/accordion-item.styles.ts'
 import { useState } from 'react'
 
 type Props = {
@@ -21,14 +14,17 @@ export const AccordionItem = ({ item }: Props) => {
     }
 
     return (
-        <StyledAccordionItem>
-            <AccordionHeader onClick={onOpenItem} justify="space-between" align="center">
-                <Question>{item.question}</Question>
-                <Plus active={active ? active.toString() : undefined} aria-label="toggle-answer" />
-            </AccordionHeader>
-            <AccordionContent>
-                <Answer active={active ? active.toString() : undefined}>{item.answer}</Answer>
-            </AccordionContent>
-        </StyledAccordionItem>
+        <S.AccordionItem>
+            <S.AccordionHeader onClick={onOpenItem} justify="space-between" align="center">
+                <S.Question>{item.question}</S.Question>
+                <S.Plus
+                    active={active ? active.toString() : undefined}
+                    aria-label="toggle-answer"
+                />
+            </S.AccordionHeader>
+            <S.AccordionContent>
+                <S.Answer active={active ? active.toString() : undefined}>{item.answer}</S.Answer>
+            </S.AccordionContent>
+        </S.AccordionItem>
     )
 }

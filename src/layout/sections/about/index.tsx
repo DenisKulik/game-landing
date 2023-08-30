@@ -1,12 +1,5 @@
 import { useRef, useState } from 'react'
-import {
-    AboutHeading,
-    StyledAbout,
-    Video,
-    VideoInfo,
-    VideoTitle,
-    VideoWrapper,
-} from 'layout/sections/about/about.styles.ts'
+import { S } from 'layout/sections/about/about.styles.ts'
 import { Button } from 'components/common/button'
 import trailer from 'assets/videos/trailer.mp4'
 import poster from 'assets/img/bg-video.webp'
@@ -25,19 +18,19 @@ export const About = () => {
     }
 
     return (
-        <StyledAbout>
-            <AboutHeading>About Game</AboutHeading>
-            <VideoWrapper playing={isVideoPlaying ? isVideoPlaying.toString() : ''}>
-                <VideoInfo>
-                    <VideoTitle>Watch the Trailer</VideoTitle>
+        <S.About>
+            <S.AboutHeading>About Game</S.AboutHeading>
+            <S.VideoWrapper playing={isVideoPlaying ? isVideoPlaying.toString() : ''}>
+                <S.VideoInfo>
+                    <S.VideoTitle>Watch the Trailer</S.VideoTitle>
                     <Button
                         onClick={onPlayPauseVideo}
                         title={isVideoPlaying ? 'pause' : 'play'}
                         color="dark"
                     />
-                </VideoInfo>
-                <Video ref={videoRef} src={trailer} poster={poster}></Video>
-            </VideoWrapper>
-        </StyledAbout>
+                </S.VideoInfo>
+                <S.Video ref={videoRef} src={trailer} poster={poster}></S.Video>
+            </S.VideoWrapper>
+        </S.About>
     )
 }

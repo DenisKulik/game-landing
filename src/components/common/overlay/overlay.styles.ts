@@ -4,7 +4,7 @@ type StyledOverlayProps = {
     active?: string
 }
 
-export const StyledOverlay = styled.div<StyledOverlayProps>`
+const Overlay = styled.div<StyledOverlayProps>`
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -13,3 +13,7 @@ export const StyledOverlay = styled.div<StyledOverlayProps>`
     visibility: ${({ active }) => (active ? 'visible' : 'hidden')};
     background-color: ${({ theme }) => theme.colors.background};
 `
+
+export const S = {
+    Overlay,
+}

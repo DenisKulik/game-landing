@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { FlexContainer } from 'components/common/flex-container'
 
-export const StyledNewsSlide = styled.div`
+const NewsSlide = styled.div`
     max-width: 61.5rem;
     width: 100%;
     padding: 2rem;
@@ -18,7 +18,7 @@ export const StyledNewsSlide = styled.div`
     }
 `
 
-export const NewsContent = styled(FlexContainer)`
+const NewsContent = styled(FlexContainer)`
     @media ${({ theme }) => theme.media.small} {
         flex-direction: column;
         justify-content: center;
@@ -26,28 +26,28 @@ export const NewsContent = styled(FlexContainer)`
     }
 `
 
-export const NewsTitle = styled.h3`
+const NewsTitle = styled.h3`
     margin-bottom: 1.6rem;
     font-size: 1.9rem;
     font-weight: 600;
     text-transform: uppercase;
 `
 
-export const GameName = styled.span`
+const GameName = styled.span`
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.primary};
 `
 
-export const Date = styled.span`
+const Date = styled.span`
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.7rem;
     color: ${({ theme }) => theme.colors.grey};
 `
 
-export const NewsDescr = styled.p`
+const NewsDescription = styled.p`
     max-width: 25.6rem;
     font-size: 12px;
     line-height: 1.7rem;
@@ -58,4 +58,14 @@ export const NewsDescr = styled.p`
     }
 `
 
-export const NewsImage = styled.img``
+const NewsImage = styled.img``
+
+export const S = {
+    NewsSlide,
+    NewsContent,
+    NewsTitle,
+    GameName,
+    Date,
+    NewsDescription,
+    NewsImage,
+}

@@ -1,9 +1,9 @@
-import { StyledOverlay } from 'components/common/overlay/overlay.styles.ts'
+import { S } from 'components/common/overlay/overlay.styles.ts'
 
 type Props = {
     active: boolean
 }
 
 export const Overlay = ({ active = false }: Props) => {
-    return <StyledOverlay active={active ? active.toString() : undefined}></StyledOverlay>
+    return <S.Overlay active={active ? active.toString() : undefined}></S.Overlay>
 }

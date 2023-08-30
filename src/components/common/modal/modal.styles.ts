@@ -5,7 +5,7 @@ type StyledModalProps = {
     opened?: string
 }
 
-export const StyledModal = styled.div<StyledModalProps>`
+const Modal = styled.div<StyledModalProps>`
     max-width: 47rem;
     width: 100%;
     position: fixed;
@@ -29,7 +29,7 @@ export const StyledModal = styled.div<StyledModalProps>`
     }
 `
 
-export const ModalClose = styled.div`
+const ModalClose = styled.div`
     width: 15px;
     text-align: center;
     margin-left: auto;
@@ -41,9 +41,7 @@ export const ModalClose = styled.div`
     }
 `
 
-export const ModalHeader = styled.div``
-
-export const ModalTitle = styled.h3`
+const ModalTitle = styled.h3`
     margin-bottom: 1rem;
     color: #8856d9;
     text-align: center;
@@ -52,7 +50,7 @@ export const ModalTitle = styled.h3`
     text-transform: uppercase;
 `
 
-export const ModalEdition = styled.div`
+const ModalEdition = styled.div`
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.2;
@@ -60,21 +58,19 @@ export const ModalEdition = styled.div`
     text-transform: uppercase;
 `
 
-export const Form = styled.form``
-
-export const FormGroup = styled.div`
+const FormGroup = styled.div`
     margin-bottom: 1.7rem;
     width: 100%;
 `
 
-export const Label = styled.label`
+const Label = styled.label`
     display: block;
     margin-bottom: 0.7rem;
     font-size: 1rem;
     text-transform: uppercase;
 `
 
-export const Input = styled.input.attrs(({ type }) => ({
+const Input = styled.input.attrs(({ type }) => ({
     type: type || 'text',
 }))`
     width: ${({ type }) => (type === 'checkbox' ? 'auto' : 100)}%;
@@ -85,12 +81,12 @@ export const Input = styled.input.attrs(({ type }) => ({
     background: ${({ theme }) => theme.colors.darkgrey};
 `
 
-export const CheckboxContainer = styled(FlexContainer)`
+const CheckboxContainer = styled(FlexContainer)`
     margin-bottom: 1.7rem;
     position: relative;
 `
 
-export const Check = styled.span`
+const Check = styled.span`
     width: 2.5rem;
     height: 2.5rem;
     text-align: center;
@@ -98,7 +94,7 @@ export const Check = styled.span`
     background-color: ${({ theme }) => theme.colors.darkgrey};
 `
 
-export const ModalCheckbox = styled(Input)`
+const ModalCheckbox = styled(Input)`
     width: 2.5rem;
     height: 2.5rem;
     position: absolute;
@@ -116,7 +112,7 @@ export const ModalCheckbox = styled(Input)`
     }
 `
 
-export const CheckLabel = styled(Label)`
+const CheckLabel = styled(Label)`
     margin-bottom: 0;
     span {
         color: #ff4136;
@@ -125,18 +121,35 @@ export const CheckLabel = styled(Label)`
     }
 `
 
-export const ModalDescription = styled.p`
+const ModalDescription = styled.p`
     margin-bottom: 1.3rem;
     color: #d9d9d9;
     font-size: 1rem;
 `
 
-export const SummaDescription = styled.span`
+const SummaDescription = styled.span`
     font-size: 1.4rem;
     font-weight: 500;
 `
 
-export const TotalSumma = styled.span`
+const TotalSumma = styled.span`
     font-size: 2rem;
     font-weight: 500;
 `
+
+export const S = {
+    Modal,
+    ModalClose,
+    ModalTitle,
+    ModalEdition,
+    FormGroup,
+    Label,
+    Input,
+    CheckboxContainer,
+    Check,
+    ModalCheckbox,
+    CheckLabel,
+    ModalDescription,
+    SummaDescription,
+    TotalSumma,
+}

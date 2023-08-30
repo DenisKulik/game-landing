@@ -1,20 +1,6 @@
 import { ChangeEvent } from 'react'
 import { EditionGame, PcEdition, Platform, PsEdition } from 'data'
-import {
-    Checkbox,
-    ExploreTitle,
-    CurrentEdition,
-    StyledExploreItem,
-    Switch,
-    SwichControl,
-    Knob,
-    Image,
-    ImageWrapper,
-    Description,
-    EditionList,
-    EditionItem,
-    ImageInner,
-} from 'components/explore-items/explore-item/explore-item.styles.ts'
+import { S } from 'components/explore-items/explore-item/explore-item.styles.ts'
 import { FlexContainer } from 'components/common/flex-container'
 import { Button } from 'components/common/button'
 
@@ -42,10 +28,10 @@ export const ExploreItem = ({
     onClickBuyNow,
 }: Props) => {
     const EditionElements = Object.entries(data).map(([key, value], idx) => (
-        <EditionItem key={idx}>
+        <S.EditionItem key={idx}>
             <span>{key}</span>
             <span>: {value}</span>
-        </EditionItem>
+        </S.EditionItem>
     ))
 
     const onChangeChecked = (e: ChangeEvent<HTMLInputElement>) => {
@@ -53,42 +39,42 @@ export const ExploreItem = ({
     }
 
     return (
-        <StyledExploreItem>
-            <ExploreTitle>{title}</ExploreTitle>
-            <Switch justify="center" align="center" gap="1.5rem">
-                <CurrentEdition edition="min" current={edition}>
+        <S.ExploreItem>
+            <S.ExploreTitle>{title}</S.ExploreTitle>
+            <S.Switch justify="center" align="center" gap="1.5rem">
+                <S.CurrentEdition edition="min" current={edition}>
                     {characteristics[0]}
-                </CurrentEdition>
-                <SwichControl>
-                    <Checkbox
+                </S.CurrentEdition>
+                <S.SwitchControl>
+                    <S.Checkbox
                         onChange={onChangeChecked}
                         checked={edition === 'max'}
                         aria-label="switch-editions"
                     />
-                    <Knob></Knob>
-                </SwichControl>
-                <CurrentEdition edition="max" current={edition}>
+                    <S.Knob></S.Knob>
+                </S.SwitchControl>
+                <S.CurrentEdition edition="max" current={edition}>
                     {characteristics[1]}
-                </CurrentEdition>
-            </Switch>
+                </S.CurrentEdition>
+            </S.Switch>
 
             <FlexContainer justify="center" gap="5rem" wrap="wrap">
-                <ImageWrapper align="flex-end">
-                    <ImageInner style={{ backgroundImage: `url(${bgCard})` }}>
-                        <Image src={img} alt={platform} />
-                    </ImageInner>
-                </ImageWrapper>
+                <S.ImageWrapper align="flex-end">
+                    <S.ImageInner style={{ backgroundImage: `url(${bgCard})` }}>
+                        <S.Image src={img} alt={platform} />
+                    </S.ImageInner>
+                </S.ImageWrapper>
 
-                <Description order={platform === 'ps' ? -1 : 0}>
-                    <EditionList>{EditionElements}</EditionList>
+                <S.Description order={platform === 'ps' ? -1 : 0}>
+                    <S.EditionList>{EditionElements}</S.EditionList>
                     <Button
                         title="buy now"
                         color="secondary"
                         size="small"
                         callback={() => onClickBuyNow(`${platform} edition`, data.price)}
                     />
-                </Description>
+                </S.Description>
             </FlexContainer>
-        </StyledExploreItem>
+        </S.ExploreItem>
     )
 }

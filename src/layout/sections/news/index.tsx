@@ -1,12 +1,12 @@
-import { NewsHeading, StyledNews } from 'layout/sections/news/news.styles.ts'
+import { S } from 'layout/sections/news/news.styles.ts'
 import { Slider } from 'components/slider'
 import { news } from 'data'
 
 export const News = () => {
     return (
-        <StyledNews>
-            <NewsHeading>News</NewsHeading>
+        <S.News>
+            <S.NewsHeading>News</S.NewsHeading>
             <Slider data={news} />
-        </StyledNews>
+        </S.News>
     )
 }

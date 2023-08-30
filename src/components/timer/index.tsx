@@ -1,4 +1,4 @@
-import { StyledTimer, TimerItem } from 'components/timer/timer.styles.ts'
+import { S } from 'components/timer/timer.styles.ts'
 import { FlexContainer } from 'components/common/flex-container'
 import { useCountdownTimer } from 'hooks'
 
@@ -19,23 +19,23 @@ export const Timer = ({ initialTime }: Props) => {
     const { hours, minutes, secs } = formatTime(remainingTime)
 
     return (
-        <StyledTimer align="center" gap="1.9rem">
+        <S.Timer align="center" gap="1.9rem">
             <span>Release</span>
 
             <FlexContainer justify="space-between" gap="0.5rem">
-                <TimerItem>
+                <S.TimerItem>
                     <div>{hours}</div>
                     <span>H</span>
-                </TimerItem>
-                <TimerItem>
+                </S.TimerItem>
+                <S.TimerItem>
                     <div>{minutes}</div>
                     <span>M</span>
-                </TimerItem>
-                <TimerItem>
+                </S.TimerItem>
+                <S.TimerItem>
                     <div>{secs}</div>
                     <span>S</span>
-                </TimerItem>
+                </S.TimerItem>
             </FlexContainer>
-        </StyledTimer>
+        </S.Timer>
     )
 }

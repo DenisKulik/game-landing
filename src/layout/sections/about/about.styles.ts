@@ -5,14 +5,14 @@ type VideoProps = {
     playing?: string
 }
 
-export const StyledAbout = styled.section`
+const About = styled.section`
     padding-top: 6rem;
 `
-export const AboutHeading = styled(SectionHeading)`
+const AboutHeading = styled(SectionHeading)`
     margin-bottom: 3.2rem;
 `
 
-export const VideoWrapper = styled.div<VideoProps>`
+const VideoWrapper = styled.div<VideoProps>`
     position: relative;
 
     ${({ playing }) =>
@@ -27,7 +27,7 @@ export const VideoWrapper = styled.div<VideoProps>`
         `}
 `
 
-export const VideoInfo = styled.div`
+const VideoInfo = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
@@ -39,7 +39,7 @@ export const VideoInfo = styled.div`
     }
 `
 
-export const VideoTitle = styled.div`
+const VideoTitle = styled.div`
     margin-bottom: 2.9rem;
     font-size: 5rem;
     font-weight: 500;
@@ -52,7 +52,16 @@ export const VideoTitle = styled.div`
     }
 `
 
-export const Video = styled.video`
+const Video = styled.video`
     width: 100%;
     height: auto;
 `
+
+export const S = {
+    About,
+    AboutHeading,
+    VideoWrapper,
+    VideoInfo,
+    VideoTitle,
+    Video,
+}

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { FlexContainer } from 'components/common/flex-container'
 
-export const StyledHeader = styled.header`
+const Header = styled.header`
     width: 100%;
     position: absolute;
     top: 0;
@@ -9,7 +9,7 @@ export const StyledHeader = styled.header`
     z-index: 10;
 `
 
-export const HeaderWrapper = styled(FlexContainer)`
+const HeaderWrapper = styled(FlexContainer)`
     @media ${({ theme }) => theme.media.medium} {
         flex-direction: column;
 
@@ -18,3 +18,8 @@ export const HeaderWrapper = styled(FlexContainer)`
         }
     }
 `
+
+export const S = {
+    Header,
+    HeaderWrapper,
+}

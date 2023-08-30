@@ -1,4 +1,4 @@
-import { LinkList, StyledLink, StyledNav } from 'components/common/nav-bar/nav-bar.styles.ts'
+import { S } from 'components/common/nav-bar/nav-bar.styles.ts'
 import { FlexContainer } from 'components/common/flex-container'
 
 type Props = {
@@ -10,15 +10,15 @@ const navItems: string[] = ['editions', 'controller', 'about', 'explore', 'news'
 export const NavBar = ({ visible = true }: Props) => {
     const navElements = navItems.map(elem => (
         <li key={elem} role="menuitem">
-            <StyledLink href="#">{elem}</StyledLink>
+            <S.StyledLink href="#">{elem}</S.StyledLink>
         </li>
     ))
 
     return (
-        <StyledNav visible={visible ? visible.toString() : undefined}>
-            <FlexContainer as={LinkList} gap="3rem" wrap="wrap" role="menu">
+        <S.Nav visible={visible ? visible.toString() : undefined}>
+            <FlexContainer as={S.LinkList} gap="3rem" wrap="wrap" role="menu">
                 {navElements}
             </FlexContainer>
-        </StyledNav>
+        </S.Nav>
     )
 }

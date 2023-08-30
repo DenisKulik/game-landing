@@ -11,7 +11,7 @@ type CurrentEditionProps = {
     current: EditionGame
 }
 
-export const StyledExploreItem = styled.div`
+const ExploreItem = styled.div`
     &:not(:last-child) {
         margin-bottom: 4.4rem;
     }
@@ -23,7 +23,7 @@ export const StyledExploreItem = styled.div`
     }
 `
 
-export const ExploreTitle = styled.h3`
+const ExploreTitle = styled.h3`
     position: relative;
     margin-bottom: 2rem;
     text-align: center;
@@ -32,13 +32,13 @@ export const ExploreTitle = styled.h3`
     z-index: 2;
 `
 
-export const Switch = styled(FlexContainer)`
+const Switch = styled(FlexContainer)`
     position: relative;
     margin-bottom: 3rem;
     z-index: 10;
 `
 
-export const CurrentEdition = styled.span<CurrentEditionProps>`
+const CurrentEdition = styled.span<CurrentEditionProps>`
     font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
@@ -51,7 +51,7 @@ export const CurrentEdition = styled.span<CurrentEditionProps>`
     }
 `
 
-export const SwichControl = styled.div`
+const SwitchControl = styled.div`
     width: 5.4rem;
     height: 2.6rem;
     position: relative;
@@ -59,7 +59,7 @@ export const SwichControl = styled.div`
     border-radius: 1.2rem;
 `
 
-export const Knob = styled.span`
+const Knob = styled.span`
     width: 1.8rem;
     height: 1.8rem;
     position: absolute;
@@ -71,7 +71,7 @@ export const Knob = styled.span`
     transition: transform 0.2s ease-in-out;
 `
 
-export const Checkbox = styled.input.attrs(() => ({
+const Checkbox = styled.input.attrs(() => ({
     type: 'checkbox',
 }))`
     width: 100%;
@@ -87,11 +87,11 @@ export const Checkbox = styled.input.attrs(() => ({
     }
 `
 
-export const ImageWrapper = styled(FlexContainer)`
+const ImageWrapper = styled(FlexContainer)`
     text-align: center;
 `
 
-export const ImageInner = styled.div`
+const ImageInner = styled.div`
     width: 35rem;
     height: 35rem;
     position: relative;
@@ -115,7 +115,7 @@ export const ImageInner = styled.div`
     }
 `
 
-export const Image = styled.img`
+const Image = styled.img`
     max-width: unset;
     position: absolute;
     bottom: 0;
@@ -126,20 +126,20 @@ export const Image = styled.img`
     }
 `
 
-export const Description = styled.div<DescriptionProps>`
+const Description = styled.div<DescriptionProps>`
     max-width: 60rem;
     width: 100%;
     align-self: flex-end;
     order: ${({ order }) => order};
 `
 
-export const EditionList = styled.ul`
+const EditionList = styled.ul`
     list-style: none;
     text-align: left;
     min-height: 34rem;
 `
 
-export const EditionItem = styled.li`
+const EditionItem = styled.li`
     font-size: 1.5rem;
     text-transform: uppercase;
     line-height: 3.6rem;
@@ -148,3 +148,19 @@ export const EditionItem = styled.li`
         color: ${({ theme }) => theme.colors.primary};
     }
 `
+
+export const S = {
+    ExploreItem,
+    ExploreTitle,
+    Switch,
+    CurrentEdition,
+    SwitchControl,
+    Knob,
+    Checkbox,
+    ImageWrapper,
+    ImageInner,
+    Image,
+    Description,
+    EditionList,
+    EditionItem,
+}

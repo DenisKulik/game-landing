@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledEditionCard = styled.div`
+const EditionCard = styled.div`
     padding: 1.7rem;
     border-radius: 6px;
     background: linear-gradient(180deg, #141615 0%, ${({ theme }) => theme.colors.background} 100%);
@@ -10,20 +10,20 @@ export const StyledEditionCard = styled.div`
     }
 `
 
-export const Image = styled.img`
+const Image = styled.img`
     margin-bottom: 2rem;
     border-radius: 6px;
     object-fit: cover;
 `
 
-export const Title = styled.h3`
+const Title = styled.h3`
     margin-bottom: 1.5rem;
     text-align: center;
     font-size: 1.6rem;
     font-weight: 700;
 `
 
-export const Subtitle = styled.div`
+const Subtitle = styled.div`
     margin-bottom: 3rem;
     text-align: center;
     font-size: 1.6rem;
@@ -31,12 +31,12 @@ export const Subtitle = styled.div`
     color: ${({ theme }) => theme.colors.sea};
 `
 
-export const Info = styled.ul`
+const Info = styled.ul`
     margin-bottom: 0.6rem;
     list-style: none;
 `
 
-export const InfoItem = styled.li`
+const InfoItem = styled.li`
     color: ${({ theme }) => theme.colors.grey};
     font-size: 1.4rem;
 
@@ -45,10 +45,20 @@ export const InfoItem = styled.li`
     }
 `
 
-export const Price = styled.div`
+const Price = styled.div`
     margin-bottom: 1.4rem;
     text-align: right;
     font-size: 1.9rem;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.white};
 `
+
+export const S = {
+    EditionCard,
+    Image,
+    Title,
+    Subtitle,
+    Info,
+    InfoItem,
+    Price,
+}

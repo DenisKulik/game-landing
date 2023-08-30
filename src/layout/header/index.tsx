@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import { Container } from 'components/common/container'
-import { HeaderWrapper, StyledHeader } from 'layout/header/header.styles.ts'
+import { S } from 'layout/header/header.styles.ts'
 import { NavBar } from 'components/common/nav-bar'
 import { MenuBtn } from 'components/common/menu-btn'
 import { Timer } from 'components/timer'
@@ -15,16 +15,16 @@ export const Header = () => {
     }
 
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
-                <HeaderWrapper justify="space-between" gap="3rem">
+                <S.HeaderWrapper justify="space-between" gap="3rem">
                     <FlexContainer align="flex-start" gap="5rem" wrap="wrap">
                         <MenuBtn callback={onClickBurgerMenu} active={isOpenedNav} />
                         <NavBar visible={isOpenedNav} />
                     </FlexContainer>
                     <Timer initialTime={86399} />
-                </HeaderWrapper>
+                </S.HeaderWrapper>
             </Container>
-        </StyledHeader>
+        </S.Header>
     )
 }

@@ -3,14 +3,14 @@ import { SectionHeading } from 'components/common/section-heading'
 import { levitation } from 'styles/animations/levitation.ts'
 import { FlexContainer } from 'components/common/flex-container'
 
-export const StyledDualSense = styled.section`
+const DualSense = styled.section`
     padding-top: 6rem;
 `
 
-export const DualSenseHeading = styled(SectionHeading)`
+const DualSenseHeading = styled(SectionHeading)`
     margin-bottom: 2rem;
 `
-export const DualSenseWrapper = styled(FlexContainer)`
+const DualSenseWrapper = styled(FlexContainer)`
     @media ${({ theme }) => theme.media.medium} {
         flex-direction: column;
         align-items: center;
@@ -18,11 +18,11 @@ export const DualSenseWrapper = styled(FlexContainer)`
     }
 `
 
-export const DualSenseInfo = styled.div`
+const DualSenseInfo = styled.div`
     max-width: 42.5rem;
 `
 
-export const DualSenseDescr = styled.p`
+const DualSenseDescription = styled.p`
     font-size: 1.8rem;
     line-height: 2.7rem;
     color: ${({ theme }) => theme.colors.sea};
@@ -32,21 +32,21 @@ export const DualSenseDescr = styled.p`
     }
 `
 
-export const GameName = styled.span`
+const GameName = styled.span`
     color: ${({ theme }) => theme.colors.primary};
 `
 
-export const Discount = styled.span`
+const Discount = styled.span`
     color: ${({ theme }) => theme.colors.secondary};
 `
 
-export const Price = styled.div`
+const Price = styled.div`
     font-size: 3rem;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.white};
 `
 
-export const ImageWrapper = styled.div`
+const ImageWrapper = styled.div`
     position: relative;
 
     &::before {
@@ -67,6 +67,19 @@ export const ImageWrapper = styled.div`
     }
 `
 
-export const DualSenseImage = styled.img`
+const DualSenseImage = styled.img`
     animation: ${levitation} 1.5s infinite linear alternate;
 `
+
+export const S = {
+    DualSense,
+    DualSenseHeading,
+    DualSenseWrapper,
+    DualSenseInfo,
+    DualSenseDescription,
+    GameName,
+    Discount,
+    Price,
+    ImageWrapper,
+    DualSenseImage,
+}

@@ -4,7 +4,7 @@ type LinesProps = {
     active?: string
 }
 
-export const StyledBurgerBtn = styled.button`
+const BurgerBtn = styled.button`
     width: 25px;
     height: 16px;
     position: relative;
@@ -23,7 +23,7 @@ export const StyledBurgerBtn = styled.button`
     }
 `
 
-export const Lines = styled.span<LinesProps>`
+const Lines = styled.span<LinesProps>`
     width: ${({ active }) => (active ? 12 : 25)}px;
     height: 2px;
     display: block;
@@ -53,3 +53,8 @@ export const Lines = styled.span<LinesProps>`
     }
   }
 `
+
+export const S = {
+    BurgerBtn,
+    Lines,
+}

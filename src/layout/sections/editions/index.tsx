@@ -1,6 +1,6 @@
 import { editions } from 'data'
 import { Container } from 'components/common/container'
-import { EditionsHeading, StyledEditions } from 'layout/sections/editions/editions.styles.ts'
+import { S } from 'layout/sections/editions/editions.styles.ts'
 import { FlexContainer } from 'components/common/flex-container'
 import { EditionCard } from 'components/edition-card'
 
@@ -14,13 +14,13 @@ export const Editions = ({ onClickBuyNow }: Props) => {
     ))
 
     return (
-        <StyledEditions>
+        <S.Editions>
             <Container>
-                <EditionsHeading>Editions</EditionsHeading>
+                <S.EditionsHeading>Editions</S.EditionsHeading>
                 <FlexContainer justify="center" wrap="wrap" gap="1.5rem">
                     {EditionCards}
                 </FlexContainer>
             </Container>
-        </StyledEditions>
+        </S.Editions>
     )
 }

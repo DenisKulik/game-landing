@@ -5,7 +5,7 @@ type AccordionProps = {
     active?: string
 }
 
-export const StyledAccordionItem = styled.div`
+const AccordionItem = styled.div`
     transition: transform 0.4s ease-in-out;
     transform: translate(0);
     border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
@@ -15,19 +15,19 @@ export const StyledAccordionItem = styled.div`
     }
 `
 
-export const AccordionHeader = styled(FlexContainer)`
+const AccordionHeader = styled(FlexContainer)`
     width: 100%;
     margin-bottom: 1rem;
     cursor: pointer;
 `
 
-export const Question = styled.p`
+const Question = styled.p`
     text-align: left;
     font-size: 1.7rem;
     font-weight: 600;
 `
 
-export const Plus = styled.span<AccordionProps>`
+const Plus = styled.span<AccordionProps>`
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -50,12 +50,21 @@ export const Plus = styled.span<AccordionProps>`
     }
 `
 
-export const AccordionContent = styled.div`
+const AccordionContent = styled.div`
     padding-bottom: 1rem;
 `
 
-export const Answer = styled.p<AccordionProps>`
+const Answer = styled.p<AccordionProps>`
     max-height: ${({ active }) => (active ? 100 : 0)}px;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
 `
+
+export const S = {
+    AccordionItem,
+    AccordionHeader,
+    Question,
+    Plus,
+    AccordionContent,
+    Answer,
+}

@@ -1,4 +1,4 @@
-import { AppWrapper } from 'app/app.styles.ts'
+import { S } from 'app/app.styles.ts'
 import { Header } from 'layout/header'
 import { Main } from 'layout/sections/main'
 import { Editions } from 'layout/sections/editions'
@@ -29,7 +29,7 @@ export const App = () => {
     }
 
     return (
-        <AppWrapper>
+        <S.App>
             <Overlay active={isOpenedModal} />
             <Header />
             <Main onClickBuyNow={onClickBuyNow} />
@@ -45,6 +45,6 @@ export const App = () => {
                 currentEdition={currentEdition}
                 onCloseModal={onCloseModal}
             />
-        </AppWrapper>
+        </S.App>
     )
 }

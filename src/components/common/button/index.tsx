@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledButton } from 'components/common/button/button.styles.ts'
+import { S } from 'components/common/button/button.styles.ts'
 
 type Props = DefaultButton & {
     title: string
@@ -16,9 +16,9 @@ export const Button = ({
     ...restProps
 }: Props) => {
     return (
-        <StyledButton size={size} color={color} onClick={callback} {...restProps}>
+        <S.Button size={size} color={color} onClick={callback} {...restProps}>
             {title}
-        </StyledButton>
+        </S.Button>
     )
 }
 

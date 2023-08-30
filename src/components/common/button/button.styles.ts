@@ -6,7 +6,7 @@ type StyledButtonProps = Partial<{
     size: Size
 }>
 
-export const StyledButton = styled.button<StyledButtonProps>`
+const Button = styled.button<StyledButtonProps>`
     display: block;
     text-transform: uppercase;
     font-weight: 500;
@@ -61,3 +61,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
         box-shadow: 0 0.75rem 0.5rem rgb(0 0 0 / 20%);
     }
 `
+
+export const S = {
+    Button,
+}
