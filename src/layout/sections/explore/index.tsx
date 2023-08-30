@@ -8,7 +8,7 @@ type Props = {
 
 export const Explore = ({ onClickBuyNow }: Props) => {
     return (
-        <S.Explore>
+        <S.Explore id="explore">
             <Container>
                 <S.ExploreHeading>Explore the God of War series</S.ExploreHeading>
                 <ExploreItems onClickBuyNow={onClickBuyNow} />

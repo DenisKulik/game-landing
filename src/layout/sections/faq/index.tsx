@@ -5,7 +5,7 @@ import { Container } from 'components/common/container'
 
 export const FAQ = () => {
     return (
-        <S.FAQ>
+        <S.FAQ id="faq">
             <Container>
                 <S.FAQHeading>FAQ</S.FAQHeading>
                 <Accordion data={faq} />

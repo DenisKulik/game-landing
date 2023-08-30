@@ -14,7 +14,7 @@ export const Editions = ({ onClickBuyNow }: Props) => {
     ))
 
     return (
-        <S.Editions>
+        <S.Editions id="editions">
             <Container>
                 <S.EditionsHeading>Editions</S.EditionsHeading>
                 <FlexContainer justify="center" wrap="wrap" gap="1.5rem">

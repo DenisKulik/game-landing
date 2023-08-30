@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-scroll'
 
 type StyledNavProps = {
     visible?: string
@@ -15,8 +16,9 @@ const LinkList = styled.ul`
     text-transform: uppercase;
 `
 
-const StyledLink = styled.a`
+const NavLink = styled(Link)`
     text-decoration: none;
+    cursor: pointer;
     opacity: 0.5;
     color: ${({ theme }) => theme.colors.white};
     transition: color 0.2s ease-in-out;
@@ -29,5 +31,5 @@ const StyledLink = styled.a`
 export const S = {
     Nav,
     LinkList,
-    StyledLink,
+    NavLink,
 }

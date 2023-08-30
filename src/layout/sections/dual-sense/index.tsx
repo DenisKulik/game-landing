@@ -10,7 +10,7 @@ type Props = {
 
 export const DualSense = ({ onClickBuyNow }: Props) => {
     return (
-        <S.DualSense>
+        <S.DualSense id="controller">
             <Container>
                 <S.DualSenseHeading>DualSense</S.DualSenseHeading>
                 <S.DualSenseWrapper justify="center" gap="15rem">

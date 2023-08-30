@@ -4,7 +4,7 @@ import { news } from 'data'
 
 export const News = () => {
     return (
-        <S.News>
+        <S.News id="news">
             <S.NewsHeading>News</S.NewsHeading>
             <Slider data={news} />
         </S.News>

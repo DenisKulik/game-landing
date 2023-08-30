@@ -18,7 +18,7 @@ export const About = () => {
     }
 
     return (
-        <S.About>
+        <S.About id="about">
             <S.AboutHeading>About Game</S.AboutHeading>
             <S.VideoWrapper playing={isVideoPlaying ? isVideoPlaying.toString() : ''}>
                 <S.VideoInfo>
