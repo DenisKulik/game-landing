@@ -72,7 +72,7 @@ export const ExploreItem = ({
                 </CurrentEdition>
             </Switch>
 
-            <FlexContainer justify="center" gap="10rem" wrap="wrap">
+            <FlexContainer justify="center" gap="5rem" wrap="wrap">
                 <ImageWrapper align="flex-end">
                     <ImageInner style={{ backgroundImage: `url(${bgCard})` }}>
                         <Image src={img} alt={platform} />

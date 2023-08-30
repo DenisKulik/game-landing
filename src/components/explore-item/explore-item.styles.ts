@@ -15,6 +15,12 @@ export const StyledExploreItem = styled.div`
     &:not(:last-child) {
         margin-bottom: 4.4rem;
     }
+
+    ${FlexContainer} {
+        @media ${({ theme }) => theme.media.large} {
+            gap: 2rem;
+        }
+    }
 `
 
 export const ExploreTitle = styled.h3`
@@ -29,6 +35,7 @@ export const ExploreTitle = styled.h3`
 export const Switch = styled(FlexContainer)`
     position: relative;
     margin-bottom: 3rem;
+    z-index: 10;
 `
 
 export const CurrentEdition = styled.span<CurrentEditionProps>`
@@ -113,6 +120,10 @@ export const Image = styled.img`
     position: absolute;
     bottom: 0;
     left: 0;
+
+    @media ${({ theme }) => theme.media.large} {
+        max-width: 100%;
+    }
 `
 
 export const Description = styled.div<DescriptionProps>`
