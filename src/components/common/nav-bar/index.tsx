@@ -10,9 +10,7 @@ const navItems: string[] = ['editions', 'controller', 'about', 'explore', 'news'
 export const NavBar = ({ visible = true }: Props) => {
     const navElements = navItems.map(elem => (
         <li key={elem} role="menuitem">
-            <S.NavLink to={elem} spy={true}>
-                {elem}
-            </S.NavLink>
+            <S.NavLink to={elem}>{elem}</S.NavLink>
         </li>
     ))
 

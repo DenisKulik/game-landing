@@ -11,6 +11,7 @@ import { Footer } from 'layout/footer'
 import { Modal } from 'components/common/modal'
 import { Overlay } from 'components/common/overlay'
 import { useState } from 'react'
+import { GoTopBtn } from 'components/common/go-top-btn'
 
 export const App = () => {
     const [isOpenedModal, setIsOpenedModal] = useState(false)
@@ -45,6 +46,7 @@ export const App = () => {
                 currentEdition={currentEdition}
                 onCloseModal={onCloseModal}
             />
+            <GoTopBtn />
         </S.App>
     )
 }
