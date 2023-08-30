@@ -15,6 +15,7 @@ const NewsSlide = styled.div`
 
     @media ${({ theme }) => theme.media.small} {
         max-width: 40rem;
+        min-height: 63rem;
     }
 `
 
