@@ -15,7 +15,7 @@ import {
     StyledModal,
     SummaDescription,
     TotalSumma,
-} from 'components/modal/modal.styles.ts'
+} from 'components/common/modal/modal.styles.ts'
 import { FlexContainer } from 'components/common/flex-container'
 import { Button } from 'components/common/button'
 import modal from 'assets/img/modal.webp'

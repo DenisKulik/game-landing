@@ -14,7 +14,7 @@ import {
     EditionList,
     EditionItem,
     ImageInner,
-} from 'components/explore-item/explore-item.styles.ts'
+} from 'components/explore-items/explore-item/explore-item.styles.ts'
 import { FlexContainer } from 'components/common/flex-container'
 import { Button } from 'components/common/button'
 

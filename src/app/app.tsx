@@ -8,7 +8,7 @@ import { Explore } from 'layout/sections/explore'
 import { News } from 'layout/sections/news'
 import { FAQ } from 'layout/sections/faq'
 import { Footer } from 'layout/footer'
-import { Modal } from 'components/modal'
+import { Modal } from 'components/common/modal'
 import { Overlay } from 'components/common/overlay'
 import { useState } from 'react'
 
