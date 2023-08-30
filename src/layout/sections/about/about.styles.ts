@@ -43,7 +43,13 @@ export const VideoTitle = styled.div`
     margin-bottom: 2.9rem;
     font-size: 5rem;
     font-weight: 500;
-    line-height: 3.9rem;
+    line-height: 3rem;
+    white-space: nowrap;
+
+    @media ${({ theme }) => theme.media.small} {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+    }
 `
 
 export const Video = styled.video`
