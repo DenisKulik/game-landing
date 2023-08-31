@@ -1,11 +1,11 @@
 import { Button } from 'components/common/button'
-import { S } from 'layout/sections/main/main.styles.ts'
+import { S } from 'layout/sections/home/home.styles.ts'
 
 type Props = {
     onClickBuyNow: (edition: string, price: number) => void
 }
 
-export const Main = ({ onClickBuyNow }: Props) => {
+export const Home = ({ onClickBuyNow }: Props) => {
     return (
         <S.Main>
             <S.MainContainer>

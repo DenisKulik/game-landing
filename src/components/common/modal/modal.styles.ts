@@ -161,7 +161,19 @@ const TotalSumma = styled.span`
     font-weight: 500;
 `
 
+const Overlay = styled.div<StyledModalProps>`
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    opacity: 0.7;
+    visibility: ${({ opened }) => (opened ? 'visible' : 'hidden')};
+    background-color: ${({ theme }) => theme.colors.background};
+    transition: all 0.15s ease-in-out;
+`
+
 export const S = {
+    Overlay,
     Modal,
     ModalClose,
     ModalTitle,
