@@ -1,4 +1,4 @@
-import React from 'react'
+import { ComponentPropsWithoutRef } from 'react'
 import { S } from 'components/common/button/button.styles.ts'
 
 type Props = DefaultButton & {
@@ -23,9 +23,6 @@ export const Button = ({
 }
 
 // types
-type DefaultButton = React.DetailedHTMLProps<
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
->
+type DefaultButton = ComponentPropsWithoutRef<'button'>
 export type Size = 'big' | 'medium' | 'small'
 export type Color = 'primary' | 'secondary' | 'dark'
