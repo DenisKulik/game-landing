@@ -19,7 +19,7 @@ export const Modal = ({
 }: Props) => {
     return (
         <>
-            <S.Overlay opened={opened ? opened.toString() : undefined} />
+            <S.Overlay onClick={onCloseModal} opened={opened ? opened.toString() : undefined} />
             <S.Modal
                 opened={opened ? opened.toString() : undefined}
                 style={{ backgroundImage: `url(${modal})` }}
