@@ -28,7 +28,7 @@ const Modal = styled.div<StyledModalProps>`
         width: 100%;
     }
 
-    @media ${({ theme }) => theme.media.medium} {
+    @media ${({ theme }) => theme.media.large} {
         padding: 0.5rem 2rem;
     }
 `
@@ -44,7 +44,7 @@ const ModalClose = styled.div`
         opacity: 0.6;
     }
 
-    @media ${({ theme }) => theme.media.medium} {
+    @media ${({ theme }) => theme.media.large} {
         margin-bottom: 1rem;
     }
 `
@@ -57,7 +57,7 @@ const ModalTitle = styled.h3`
     font-weight: 700;
     text-transform: uppercase;
 
-    @media ${({ theme }) => theme.media.medium} {
+    @media ${({ theme }) => theme.media.large} {
         margin-bottom: 0.5rem;
     }
 `
@@ -74,7 +74,7 @@ const FormGroup = styled.div`
     margin-bottom: 1.7rem;
     width: 100%;
 
-    @media ${({ theme }) => theme.media.medium} {
+    @media ${({ theme }) => theme.media.large} {
         margin-bottom: 1rem;
     }
 `
@@ -96,7 +96,7 @@ const Input = styled.input.attrs(({ type }) => ({
     border-radius: 6px;
     background: ${({ theme }) => theme.colors.darkgrey};
 
-    @media ${({ theme }) => theme.media.medium} {
+    @media ${({ theme }) => theme.media.large} {
         padding: 1rem 1.2rem;
     }
 `
@@ -105,7 +105,7 @@ const CheckboxContainer = styled(FlexContainer)`
     margin-bottom: 1.7rem;
     position: relative;
 
-    @media ${({ theme }) => theme.media.medium} {
+    @media ${({ theme }) => theme.media.large} {
         margin-bottom: 1rem;
     }
 `
