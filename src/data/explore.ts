@@ -1,14 +1,20 @@
 import pcImg from 'assets/img/pc.webp'
+import pcImg2x from 'assets/img/pc-2x.webp'
 import psImg from 'assets/img/ps.webp'
+import psImg2x from 'assets/img/ps-2x.webp'
 import bgCardPs from 'assets/img/bg-card-ps.webp'
+import bgCardPs2x from 'assets/img/bg-card-ps-2x.webp'
 import bgCardPc from 'assets/img/bg-card-pc.webp'
+import bgCardPc2x from 'assets/img/bg-card-pc-2x.webp'
 
 export const explore: Explore = {
     pc: {
         platform: 'pc',
         title: 'Here are the God of War (PC) System Requirements',
         img: pcImg,
+        img2x: pcImg2x,
         bgCard: bgCardPc,
+        bgCard2x: bgCardPc2x,
         characteristics: ['minimum', 'recommended'],
         min: {
             cpu: 'Intel i5-2500k (4 core 3.3 GHz) or AMD Ryzen 3 1200 (4 core 3.1 GHz)',
@@ -37,7 +43,9 @@ export const explore: Explore = {
         platform: 'ps',
         title: 'God of War for PS4',
         img: psImg,
+        img2x: psImg2x,
         bgCard: bgCardPs,
+        bgCard2x: bgCardPs2x,
         characteristics: ['standard', 'limited'],
         min: {
             platform: 'PS4',
@@ -93,7 +101,9 @@ export type Data<T> = {
     platform: Platform
     title: string
     img: string
+    img2x: string
     bgCard: string
+    bgCard2x: string
     characteristics: string[]
     min: T
     max: T

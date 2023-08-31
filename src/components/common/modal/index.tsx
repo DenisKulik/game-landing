@@ -2,6 +2,7 @@ import { S } from 'components/common/modal/modal.styles.ts'
 import { FlexContainer } from 'components/common/flex-container'
 import { Button } from 'components/common/button'
 import modal from 'assets/img/modal.webp'
+import modal2x from 'assets/img/modal-2x.webp'
 
 type Props = {
     opened: boolean
@@ -20,10 +21,7 @@ export const Modal = ({
     return (
         <>
             <S.Overlay onClick={onCloseModal} opened={opened ? opened.toString() : undefined} />
-            <S.Modal
-                opened={opened ? opened.toString() : undefined}
-                style={{ backgroundImage: `url(${modal})` }}
-            >
+            <S.Modal opened={opened ? opened.toString() : undefined} img={modal} img2x={modal2x}>
                 <S.ModalClose onClick={onCloseModal}>x</S.ModalClose>
                 <div>
                     <S.ModalTitle>God of War Ragnarök</S.ModalTitle>

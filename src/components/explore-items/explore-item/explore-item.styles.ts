@@ -6,6 +6,11 @@ type DescriptionProps = {
     order: number
 }
 
+type ImageInnerProps = {
+    bg: string
+    bg2x: string
+}
+
 type CurrentEditionProps = {
     edition: EditionGame
     current: EditionGame
@@ -89,7 +94,7 @@ const ImageWrapper = styled(FlexContainer)`
     text-align: center;
 `
 
-const ImageInner = styled.div`
+const ImageInner = styled.div<ImageInnerProps>`
     width: 35rem;
     height: 35rem;
     position: relative;
@@ -97,6 +102,7 @@ const ImageInner = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-image: url(${({ bg }) => bg});
 
     &::before {
         content: '';
@@ -110,6 +116,10 @@ const ImageInner = styled.div`
         filter: blur(7.5rem);
         opacity: 0.8;
         background: ${({ theme }) => theme.colors.secondary};
+    }
+
+    @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+        background-image: url(${({ bg2x }) => bg2x});
     }
 `
 

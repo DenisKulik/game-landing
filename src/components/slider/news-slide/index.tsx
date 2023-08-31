@@ -15,7 +15,13 @@ export const NewsSlide = ({ item }: Props) => {
             </FlexContainer>
             <S.NewsTitle>{item.title}</S.NewsTitle>
             <S.NewsContent gap="2.4rem">
-                <S.NewsImage src={item.img} alt={item.title} width="278" height="249" />
+                <S.NewsImage
+                    src={item.img}
+                    srcSet={`${item.img2x} 2x`}
+                    alt={item.title}
+                    width="278"
+                    height="249"
+                />
                 <S.NewsDescription>{item.description}</S.NewsDescription>
             </S.NewsContent>
         </S.NewsSlide>

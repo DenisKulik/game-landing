@@ -37,7 +37,9 @@ export const ExploreItems = ({ onClickBuyNow }: Props) => {
             platform={value.platform}
             title={value.title}
             img={value.img}
+            img2x={value.img2x}
             bgCard={value.bgCard}
+            bgCard2x={value.bgCard2x}
             onChangeCurrentEdition={(platform, checked) =>
                 onChangeCurrentEdition(platform, checked)
             }

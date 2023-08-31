@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 import { FlexContainer } from 'components/common/flex-container'
 
-type StyledModalProps = {
-    opened?: string
-}
+type StyledModalProps = Partial<{
+    opened: string
+    img: string
+    img2x: string
+}>
 
 const Modal = styled.div<StyledModalProps>`
     max-width: 47rem;
@@ -18,6 +20,7 @@ const Modal = styled.div<StyledModalProps>`
     background-color: ${({ theme }) => theme.colors.background};
     background-repeat: no-repeat;
     background-position: top;
+    background-image: url(${({ img }) => img});
     border-radius: 1.2rem;
     border: 1px solid ${({ theme }) => theme.colors.darkgrey};
     transform: translate(-50%, -50%);
@@ -30,6 +33,10 @@ const Modal = styled.div<StyledModalProps>`
 
     @media ${({ theme }) => theme.media.large} {
         padding: 0.5rem 2rem;
+    }
+
+    @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+        background-image: url(${({ img2x }) => img2x});
     }
 `
 

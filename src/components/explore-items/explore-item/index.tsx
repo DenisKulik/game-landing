@@ -9,7 +9,9 @@ type Props = {
     platform: Platform
     title: string
     img: string
+    img2x: string
     bgCard: string
+    bgCard2x: string
     characteristics: string[]
     edition: EditionGame
     data: PcEdition | PsEdition
@@ -21,7 +23,9 @@ export const ExploreItem = ({
     platform,
     title,
     img,
+    img2x,
     bgCard,
+    bgCard2x,
     characteristics,
     edition,
     data,
@@ -61,8 +65,8 @@ export const ExploreItem = ({
 
             <FlexContainer justify="center" gap="5rem" wrap="wrap">
                 <S.ImageWrapper align="flex-end">
-                    <S.ImageInner style={{ backgroundImage: `url(${bgCard})` }}>
-                        <S.Image src={img} alt={platform} />
+                    <S.ImageInner bg={bgCard} bg2x={bgCard2x}>
+                        <S.Image src={img} srcSet={`${img2x} 2x`} alt={platform} />
                     </S.ImageInner>
                 </S.ImageWrapper>
 
