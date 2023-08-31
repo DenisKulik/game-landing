@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 const GoTopBtn = styled.button`
     position: fixed;
-    padding: 0.8rem 1.6rem;
+    padding: 8px 16px;
     right: 3rem;
     bottom: 3rem;
-    font-size: 2.2rem;
+    font-size: 22px;
     border: none;
     border-radius: 50%;
     cursor: pointer;

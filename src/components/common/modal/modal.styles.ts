@@ -27,6 +27,10 @@ const Modal = styled.div<StyledModalProps>`
         margin-top: 1.9rem;
         width: 100%;
     }
+
+    @media ${({ theme }) => theme.media.medium} {
+        padding: 0.5rem 2rem;
+    }
 `
 
 const ModalClose = styled.div`
@@ -39,6 +43,10 @@ const ModalClose = styled.div`
     &:hover {
         opacity: 0.6;
     }
+
+    @media ${({ theme }) => theme.media.medium} {
+        margin-bottom: 1rem;
+    }
 `
 
 const ModalTitle = styled.h3`
@@ -48,6 +56,10 @@ const ModalTitle = styled.h3`
     font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
+
+    @media ${({ theme }) => theme.media.medium} {
+        margin-bottom: 0.5rem;
+    }
 `
 
 const ModalEdition = styled.div`
@@ -61,6 +73,10 @@ const ModalEdition = styled.div`
 const FormGroup = styled.div`
     margin-bottom: 1.7rem;
     width: 100%;
+
+    @media ${({ theme }) => theme.media.medium} {
+        margin-bottom: 1rem;
+    }
 `
 
 const Label = styled.label`
@@ -79,11 +95,19 @@ const Input = styled.input.attrs(({ type }) => ({
     border: none;
     border-radius: 6px;
     background: ${({ theme }) => theme.colors.darkgrey};
+
+    @media ${({ theme }) => theme.media.medium} {
+        padding: 1rem 1.2rem;
+    }
 `
 
 const CheckboxContainer = styled(FlexContainer)`
     margin-bottom: 1.7rem;
     position: relative;
+
+    @media ${({ theme }) => theme.media.medium} {
+        margin-bottom: 1rem;
+    }
 `
 
 const Check = styled.span`

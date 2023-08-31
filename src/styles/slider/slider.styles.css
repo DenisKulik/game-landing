@@ -43,4 +43,9 @@
     .alice-carousel__stage-item {
         margin-right: 0.5rem;
     }
+
+    .alice-carousel__prev-btn,
+    .alice-carousel__next-btn {
+        display: none;
+    }
 }

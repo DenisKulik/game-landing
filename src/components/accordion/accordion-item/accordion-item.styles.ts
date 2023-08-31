@@ -53,7 +53,7 @@ const AccordionContent = styled.div`
 `
 
 const Answer = styled.p<AccordionProps>`
-    max-height: ${({ active }) => (active ? 100 : 0)}px;
+    max-height: ${({ active }) => (active ? 150 : 0)}px;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
 `
