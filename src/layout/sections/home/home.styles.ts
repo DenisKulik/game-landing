@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import bg from 'assets/img/bg.webp'
+import bg2x from 'assets/img/bg-2x.webp'
 import snow from 'assets/img/snow.webp'
 import { moveInRight } from 'styles'
 import { Container } from 'components/common/container'
@@ -32,6 +33,12 @@ const Main = styled.section`
     @media ${({ theme }) => theme.media.small} {
         button {
             margin: 0 auto;
+        }
+    }
+
+    @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+        &::before {
+            background: url(${bg2x}) center/cover no-repeat;
         }
     }
 `

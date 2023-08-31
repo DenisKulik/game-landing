@@ -2,6 +2,7 @@ import { S } from 'layout/footer/footer.styles.ts'
 import { Container } from 'components/common/container'
 import { NavBar } from 'components/common/nav-bar'
 import psLogo from 'assets/img/ps-logo.webp'
+import psLogo2x from 'assets/img/ps-logo-2x.webp'
 
 export const Footer = () => {
     return (
@@ -14,7 +15,13 @@ export const Footer = () => {
                     this product. If you do not wish to accept these terms, do not download this
                     product. See Terms of Service for more important information.
                 </S.FooterInfo>
-                <S.FooterImg src={psLogo} alt="ps-logo" width="45" height="35" />
+                <S.FooterImg
+                    src={psLogo}
+                    srcSet={`${psLogo2x} 2x`}
+                    alt="ps-logo"
+                    width="45"
+                    height="35"
+                />
                 <S.FooterYear>2023</S.FooterYear>
                 <S.FooterCopy>
                     Developed by{' '}

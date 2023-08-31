@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import footerImg from 'assets/img/footer.webp'
+import footerImg2x from 'assets/img/footer-2x.webp'
 
 const Footer = styled.footer`
     padding-top: 15rem;
@@ -9,6 +10,10 @@ const Footer = styled.footer`
 
     nav > ul {
         justify-content: center;
+    }
+
+    @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+        background: url(${footerImg2x}) no-repeat right top;
     }
 `
 

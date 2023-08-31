@@ -12,7 +12,13 @@ export const EditionCard = ({ card, onClickBuyNow }: Props) => {
 
     return (
         <S.EditionCard>
-            <S.Image src={card.img} alt={card.edition} width="316" height="173" />
+            <S.Image
+                src={card.img}
+                srcSet={`${card.img2x} 2x`}
+                alt={card.edition}
+                width="316"
+                height="173"
+            />
             <S.Title>{card.edition}</S.Title>
             <S.Subtitle>{card.platform}</S.Subtitle>
             <S.Info>{infoElements}</S.Info>

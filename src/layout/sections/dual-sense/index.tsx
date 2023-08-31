@@ -4,6 +4,7 @@ import { S } from 'layout/sections/dual-sense/dual-sense.styles.ts'
 import { Container } from 'components/common/container'
 import { FlexContainer } from 'components/common/flex-container'
 import dual from 'assets/img/dual.webp'
+import dual2x from 'assets/img/dual-2x.webp'
 import { Button } from 'components/common/button'
 
 type Props = {
@@ -44,7 +45,13 @@ export const DualSense = ({ onClickBuyNow }: Props) => {
                     </Fade>
 
                     <S.ImageWrapper duration={600} triggerOnce={true}>
-                        <S.DualSenseImage src={dual} alt="dual-sense" width="340" height="309" />
+                        <S.DualSenseImage
+                            src={dual}
+                            srcSet={`${dual2x} 2x`}
+                            alt="dual-sense"
+                            width="340"
+                            height="309"
+                        />
                     </S.ImageWrapper>
                 </S.DualSenseWrapper>
             </Container>
