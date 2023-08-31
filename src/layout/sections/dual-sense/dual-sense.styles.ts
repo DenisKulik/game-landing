@@ -1,3 +1,5 @@
+import { Zoom } from 'react-awesome-reveal'
+
 import styled from 'styled-components'
 import { SectionHeading } from 'components/common/section-heading'
 import { levitation } from 'styles/animations/levitation.ts'
@@ -46,7 +48,7 @@ const Price = styled.div`
     color: ${({ theme }) => theme.colors.white};
 `
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled(Zoom)`
     position: relative;
 
     &::before {

@@ -43,16 +43,9 @@ export const DualSense = ({ onClickBuyNow }: Props) => {
                         </S.DualSenseInfo>
                     </Fade>
 
-                    <Fade direction="right" duration={600} triggerOnce={true}>
-                        <S.ImageWrapper>
-                            <S.DualSenseImage
-                                src={dual}
-                                alt="dual-sense"
-                                width="340"
-                                height="309"
-                            />
-                        </S.ImageWrapper>
-                    </Fade>
+                    <S.ImageWrapper duration={600} triggerOnce={true}>
+                        <S.DualSenseImage src={dual} alt="dual-sense" width="340" height="309" />
+                    </S.ImageWrapper>
                 </S.DualSenseWrapper>
             </Container>
         </S.DualSense>
