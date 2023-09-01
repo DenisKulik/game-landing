@@ -7,7 +7,7 @@ import { Container } from 'components/common/container'
 
 const Main = styled.section`
     padding-top: 23rem;
-    min-height: 76.5rem;
+    min-height: 77rem;
     position: relative;
 
     &::before,
