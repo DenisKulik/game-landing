@@ -12,4 +12,4 @@ The Game Landing Page project serves as a visually appealing and informative pla
 ![screenshots](./screenshots/game-landing.png)
 
 ## Built With
-This is a game landing project built using React, TypeScript, Styled-components, react-alice-carousel, react-awesome-reveal, and react-scroll. This landing page is designed to promote and showcase an exciting game.
+This is a game landing project built using `React`, `TypeScript`, `Styled-components`, `react-alice-carousel`, `react-awesome-reveal`, and `react-scroll`. This landing page is designed to promote and showcase an exciting game.
